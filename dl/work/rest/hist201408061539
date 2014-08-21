@@ -1,0 +1,107 @@
+execfile('u.py')
+dir(ddom3.nodeName)
+ddom3.nodeName
+dom3
+ddom3
+ddom3=dom3.firstchild
+ddom3=dom3.firstChild
+ddom3.nodeName
+ddom3=ddom3.nextSibling;ddom3.nodeName
+ddom3=ddom3.nextSibling
+ddom3=dom3.firstChild
+ddom3=ddom3.nextSibling
+ddom3.nodeName
+ddom3
+dom3
+dom3.firstChild
+d3=dom3.firstChild
+d3
+d3.hasChildNodes
+d3.hasChildNodes()
+dd3=d3.firstChild
+dd3
+dd3.nodeName
+dd3=dd3.nextSibling
+dd3.nodeName
+dd3=dd3.nextSibling
+dd3.nodeName
+dd3=dd3.nextSibling
+dd3.nodeName
+dd3=dd3.nextSibling
+dd3.nodeName
+dd3.nodeValue
+dd3
+dd3.toxml()
+dir(dd3)
+dd3.hasChildNodes()
+dd3.hasAttributes()
+dd3.attributes
+if dd3.nodeName == 'EdgeGateWayRecord':
+  print "hi"
+if dd3.nodeName == u'EdgeGateWayRecord':
+  print "hi"
+if str(dd3.nodeName) == 'EdgeGateWayRecord':
+  print "hi"
+if str(dd3.nodeName) == str('EdgeGateWayRecord'):
+  print "hi"
+dd3.nodeName
+if dd3.nodeName == 'EdgeGatewayRecord':
+  print "hi"
+execfile('u.py')
+dir()
+ddom3
+ddom3.nodeValue
+dir(ddom3)
+ddom3.getAttributeNode('')
+ddom3.getAttributeNode('vdc')
+ddom3.getAttributeNode('vdc').toxml()
+ddom3.getAttributeNode('vdc').item
+ddom3.getAttributeNode('vdc').items
+ddom3.getAttributeNode('vdc')
+dir(ddom3.getAttributeNode('vdc'))
+ddom3.getAttributeNode('vdc').name
+ddom3.getAttributeNode('vdc').hasChildNodes()
+ddom3.getAttributeNode('vdc').childNodes()
+ddom3.getAttributeNode('vdc').childNodes().items
+ddom3.getAttributeNode('vdc').childNodes().toxml()
+dir(ddom3.getAttributeNode('vdc').childNodes())
+dir(ddom3.getAttributeNode('vdc').childNodes)
+ddom3.getAttributeNode('vdc').childNodes
+ddom3.getAttributeNode('vdc').childNodes.item
+ddom3.getAttributeNode('vdc').childNodes.item[0]
+ddom3.getAttributeNode('vdc').childNodes.length
+ddom3.getAttributeNode('vdc').childNodes.item[0]
+ddom3.getAttributeNode('vdc').childNodes.item
+ddom3.getAttributeNode('href')
+ddom3.getAttributeNode('href').hasChildNodes()
+ddom3.getAttributeNode('href').childNodes
+ddom3.getAttributeNode('href').childNodes.length
+dir(ddom3.getAttributeNode('href').childNodes)
+ddom3.getAttributeNode('href').childNodes.length
+ddom3.getAttributeNode('href').childNodes.item
+ddom3.getAttributeNode('href').childNodes.item()
+ddom3.getAttributeNode('href').childNodes.item(0)
+ddom3.getAttributeNode('href').childNodes.item(0).length
+dir(ddom3.getAttributeNode('href').childNodes.item(0))
+dir(ddom3.getAttributeNode('href').childNodes.item)
+dir(ddom3.getAttributeNode('href').childNodes.item(0))
+ddom3.getAttributeNode('href').childNodes.item(0).childNodes
+ddom3.getAttributeNode('href').childNodes.item(0).childNodes.length
+ddom3.getAttributeNode('href').childNodes.item(0)
+ddom3.getAttributeNode('href').childNodes.item(0).nodeValue
+ddom3.getAttributeNode('href').childNodes.item(0).nodeName
+ddom3.getAttributeNode('href').childNodes.item(0).nodeType
+ddom3.getAttributeNode('href').childNodes.item(0).nodeValue
+ddom3.getAttributeNode('href').childNodes.item(0).attributes
+ddom3.getAttribute('href')
+execfile('u.py')
+sizeof(dom4)
+dom4.size
+dir()
+dom5.size
+dir(dom5)
+dom5.toprettyxml
+dom5.toprettyxml()
+dom5.toxml()
+import readline
+readline.write_history_file('hist201408061539')

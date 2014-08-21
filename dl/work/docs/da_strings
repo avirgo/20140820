@@ -1,0 +1,142 @@
+b0VIM 7.2
+root
+tony-vdesk
+~root/da
+3210
+#"! 
+MAC - prs-mac-13-njeh-pal / 10.160.52.95 /  admin     .krAft+42
+Apogee -Production
+Administrator/welcome123
+Windows NJ3
+Apogee -production
+MAC - prs-mac-14-njeh-pal / 10.160.52.96 /  admin	.krAft+42
+MAC - prs-mac-13-njeh-pal / 10.160.52.95 /  admin	.krAft+42
+MAC - prs-mac-12-njeh-pal / 10.160.52.51 /  admin	p3tp33v3
+MAC - prs-mac-11-njeh-pal / 10.160.52.50 /  admin	p3tp33v3
+MAC - prs-mac-10-njeh-pal / 10.160.52.31 /  admin	p3tp33v3
+MAC - prs-mac-09-njeh-pal / 10.160.52.30 /  admin	t3std0c
+MAC - prs-w2k3-116-n / 10.160.52.29 / admin/t3std0c / admin	t3std0c
+MAC servers in NJ2:
+*********************************************************************
+password = Hello123
+user id = dctmdctm 
+DA NJ3 - http://10.160.54.8:8000/DCTMAdmin/
+*********************************************************************
+http://10.160.36.12:50301/manager/status
+lin-179:
+http://10.160.36.8:50301/manager/status
+lin-178:
+NJ2 and NJ3 DAM Servers Tomcat Manager console: cmsops / 123cmsops123
+*********************************************************************
+http://10.160.50.179:8080/jmx-console/
+lin-340:
+http://10.160.50.178:8080/jmx-console/
+lin-339:
+NJ3 Content Serers JMX console: ?
+*********************************************************************
+http://10.160.3.199:8080/jmx-console/
+lin-165:
+http://10.160.52.62:8080/jmx-console/
+lin-177:
+NJ2 Content Serers JMX console: admin/acsAdmin
+Index Server: http://prs-lin-180-njfh-dctm-back.pearson.savvis.net:18000/admin/  (must access from Windows server in NJ2 or NJ3)
+prs-lin-338-nj3ih-dctm / s604624 / !1derfull 
+*********************************************************************
+	10.160.52.170 / root / H=s5%2{3]!
+	10.160.50.252 / root / !1derfull
+vSphere Client
+         dctm            JPxdSfP856   st{Yid5gAN SutpiDFuk3Rs
+         cmsadmin        0U86nvOh1    DS%DiArY91
+	 root / #!1derfull$$ H=s5%2{3]!
+NJ2 Linux:
+         dctm            JPxdSfP856     STOUp70F!@T: SutpiDFuk3Rs
+	 cmsadmin        0U86nvOh1 	9.tin28orE?
+	root / #!1derfull$$   H=s5%2{3]!
+NJ3 Linux
+NJ2&NJ3 Windows 2008 R2 DCAT MathML cmsadmin password = b33pt3
+All NJ2 and NJ3 Windows administrator's Passwords: !1derfull
+*********************************************************************
+	Admin Console: lin-178:  http://10.160.36.8:3389/console
+DAM Production    weblogic / animE55sTorY
+	DB connection: cms-stag-scan.pearson.savvis.net:1521/dctmuat
+	EM Console: lin-379 http://10.160.54.34:8080/em
+   	Admin Console: lin-379: http://10.160.54.34:8080/console
+HEUAT UAT/Training ESB weblogic/w3bL0g1c
+         EM Console: lin-184 http://10.160.36.33:3389/em
+         Admin Console: lin-237 http://10.160.36.33:3389/console
+HEWF Production Admin Weblogic Console weblogic/we1bl2og3ic
+	 EM Console: lin-342 http://10.160.54.8:8080/em
+	 Admin Console: lin-341 http://10.160.54.8:8080/console
+Admin Weblogic Console weblogic/COw65toYs
+	 EM Console: lin-184 http://10.160.36.18:8080/em
+	 Admin Console: lin-184 http://10.160.36.18:8080/console
+Production Admin Weblogic Console weblogic/weblogic11
+	 EM Console: lin-347 http://10.160.54.18:8080/em
+	 Admin Console: lin-347 http://10.160.54.18:8080/console
+Staging Admin Weblogic Console weblogic/474qTMDYmu
+Weblogic Console and EM:
+*********************************************************************
+	PW:  svvs123!
+	UN:   S604624_ILO
+NJ2 and NJ3 ILO logins
+*********************************************************************
+DAM Production:  http://dctm.pearson.com   / train1 / welcomeelcome1 (joost says password no workie)
+DAM Staging:  http://dctmstg.pearson.com   / train1 / welcome1
+SSL cert passphrase:  !123Pearson123!
+Request SSL Certs: https://enterprise-ssl-admin.websecurity.symantec.com/mcelp/enroll/serviceViaCC?application_locale=en_US&jur_hash=a417fbe5d4789a26cad3cfc6447c350b
+###  VeriSign ####
+---------------
+Password = 123Pearson123!
+User ID= cmspearson@gmail.com
+URL:  http://www.google.com/analytics
+---------------
+            10.40.222.195 / root / 111111
+Centos:  (same image as that of cmsftp.pearson.com = lin-196 & lin-197)
+            10.40.222.165 / root / 111111
+Redhat:  (used same image and build of the other BCH.s around NA)
+CMS OPS test servers in Chandler:
+http://ovm-nj3.pearson.savvis.net:8001/wiki/   (admin/Pw4sysman)
+CMS WIKI:
+http://ovm-nj3.pearson.savvis.net:8001/cacti/   (admin/Pw4sysman)
+CACTI: 
+dcatppe ===> cmsftpuser ====> ot$3jVGb
+dcatdev ===> cmsftpuser ====> HaBiT47amBit
+=======Dcat Sftp =====
+https://ovm-nj3.pearson.savvis.net:8001/cms/check_mk/  
+NAGIOS SITE AT NJ2 --> Being rebuilt MARCH 2013
+# NJ3
+https://ovm-nj2.pearson.savvis.net:8001/cms/check_mk/  (nagiosadmin/same as Nagios on lin-341)
+NAGIOS SITE AT NJ2 --> Being rebuilt MARCH 2013
+# NJ2
+	URL: http://10.40.222.165/cms/check_mk/
+NAGIOS central console server: uschanux003(10.40.222.165): omdadmin/L3tM!n
+/home/legacyadmin/BACKUP
+and write to:
+0,30 * * * * /home/legacyadmin/scripts/dbdump_legacyimport.sh >/dev/null 2>&1
+[legacyadmin@v-l901-nj3-cms ~]$ crontab -l
+Backups are called by cron scheduler:
+/home/legacyadmin/scripts ===> management/administrative scripts
+/home/legacyadmin/logs ===> web server logs
+/home/legacyadmin/www ===> PHP code files
+legacyadmin:Legacy Import Maintainer:/home/legacyadmin
+legacyimport:Legacy Import Prep:/home/legacyimport
+root / L3tM3!n is mysql db admin account
+PORT: 8080
+URL: legacyimport.pearson.savvis.net
+MySQL Database=> legacyimport,   user:  legacyimport /  L3g4cyimport
+SFTP Account (PHP): legacyadmin / L3g4cy4dm1n
+FTP Account (CSV): legacyimport / L3gacyimport
+# LEGACYIMPORT Project headed by Matt Haas runs from 10.160.50.199 (a vm)
+#*********************************************
+Password = !1derfull
+User id= cmsops1
+hp.com login below to open HP cases!!
+NJ3 OVM Manager : admin / Pw4sysman (https://ovm-nj3.pearson.savvis.net:8081/ovm/console)
+NJ2 OVM Manager : admin / Pw4sysman (https://ovm-nj2.pearson.savvis.net:8081/ovm/console)
+# CLOUD CONTROLLERS
+the WL console for OVM---> u should not need to do anything here other than change default port from 7001 to 8081 and to adjust timeouts. URL: ovm-nj2|3.pearson.savvis.net:8081/console (weblogic Pw4sysman)
+ovm:WL Server 11g user password: "" (ports 8081,8082)
+OVM Schemas: NJ2 ovsprod (in Oracle instance drmadm1), NJ3 ovsstage in own MySQL instance on lin378
+ovm:OVM Manager database schema password: Pw4sysman
+OEL CSI: 18729200 (lin-203 and lin-378)
+1-800-633-0930 EXT- 84765

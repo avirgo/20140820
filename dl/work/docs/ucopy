@@ -1,0 +1,1 @@
+ucopy(){ un=$1;pwdl=$(grep  ^$1: /etc/passwd);u=${pwdl#*:*:};uid=${u/:*/};u=${u#*:};gid=${u/:*};gcos=${u#*:};gcos=${gcos/:*:*};shdl=$(grep ^$1: /etc/shadow);p=${shdl#*:};p=${p/:*};echo "/usr/sbin/useradd -m -u $uid -s /bin/bash -c '$gcos' -p '$p' $un"; }

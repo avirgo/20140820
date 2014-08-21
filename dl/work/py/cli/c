@@ -1,0 +1,14 @@
+[Defaults]
+
+[ukcms-poc]
+server=lo3-mystack.pearson.com
+basicauth=YW50aG9ueS52aXJnb0BwZWFyc29uLmNvbUB1a2Ntcy1wb2M6VG9ueV9WaXJnMDI=
+
+[cms-poc]
+server=icd-mystack.pearson.com
+basicauth=YW50aG9ueS52aXJnb0BwZWFyc29uLmNvbUBjbXMtcG9jOlRvbnlfVmlyZzAyCg==
+
+[cms-sandbox]
+server=icd-mystack.pearson.com
+basicauth=YW50aG9ueS52aXJnb0BwZWFyc29uLmNvbUBjbXMtc2FuZGJveDpUb255X1ZpcmcwMgo=
+

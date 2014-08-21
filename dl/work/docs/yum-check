@@ -1,0 +1,1 @@
+ yum -q check-update 2>/dev/null |awk '{print $1, $2}'|while read -a line;do rpm -q --qf "%{NAME}-%{VERSION}.%{RELEASE}.%{ARCH} to ${line[0]/.*/}-${line[1]}.${line[0]/*./}\n" ${line[0]} 2>/dev/null;done

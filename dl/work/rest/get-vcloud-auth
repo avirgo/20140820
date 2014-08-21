@@ -1,0 +1,10 @@
+#!/bin/bash -v
+PEUSER='anthony.virgo@pearson.com'
+PEPASS="$1"
+PEORG='ukcms-poc'
+PEURL='https://lo3-mystack.pearson.com/api/sessions'
+PEAUTH="${PEUSER}@${PEORG}:${PEPASS}"
+echo $PEAUTH
+PEAUTH64="$(echo -n ${PEAUTH} | base64)"
+echo $PEAUTH64
+curl -k ${PEURL} -X 'POST' -H "Authorization: Basic ${PEAUTH64}" -H "Accept: application/*+xml;version=5.1" -I

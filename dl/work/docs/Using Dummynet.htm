@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0056)http://noahdavids.org/self_published/using_dummynet.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Using Dummynet</title>
+</head>
+
+<body background="./Using Dummynet_files/concret.jpg">
+<center>
+<h1>Using Dummynet</h1>
+<img src="./Using Dummynet_files/bluebar.gif" width="576" height="14" alt="Blue Bar separator">
+</center>
+
+
+<br><br>
+How many times have you had a client/server application that works fine when both client and server are in a LAN environment and is painful to use or even unusable when client and server communicate over a WAN?
+<p>
+In a typical development environment it's difficult to test an application over a WAN let alone a number of different WANs with different performance characteristics.
+<br>
+</p><center>
+<img src="./Using Dummynet_files/typical_test_network.jpg" width="484" height="125" alt=":Typical" test="" network"="">
+<br>
+Figure 1 - Typical test network
+</center>
+<p>If you are watching a salesman demo a product using a couple of PCs it's almost impossible. One solution is costly WAN simulators. If you search the internet you will find many products on the market ranging from very expensive to almost affordable. If your search harder you will find Dummynet which has the advantage of being free.
+</p><p>
+Dummynet runs under the FreeBSD operating system. It can be booted directly from a CD so you don't need a special PC. You don't even need a PC with two Ethernet adapters since you can configure a single Ethernet adapter to have two IP addresses. A laptop and a 4-port switch can convert any development environment or demonstration into a cross continent or ocean WAN. The rest of this article explains how to get, configure and use Dummynet.
+<br>
+</p><center>
+<img src="./Using Dummynet_files/test_network_with_dummynet.jpg" width="365" height="298" alt=":Test" network="" with="" dummynet"="">
+<br>
+Figure 2 - Test network wih Dummynet
+</center>
+<h3><b>Finding Dummynet</b></h3>
+Dummynet's home is at <a href="http://info.iet.unipi.it/~luigi/ip_dummynet/">http://info.iet.unipi.it/~luigi/ip_dummynet/</a>. There you will find a copy of PicoBSD which is a bootable copy of BSD that will fit on a 1.44meg floppy disk. The page includes instructions on copying the image under either some flavor of UNIX or Windows.
+<p>
+If your laptop (or desktop) only has a CD drive you will need another version on BSD. FreeSBIE at <a href="http://www.freesbie.org/">http://www.freesbie.org/</a> has an ISO image from which you can create a bootable CD version of FreeBSD. Once the image is downloaded you just burn it to a CD. If you don't have a tool that will burn a bootable image you can find one at <a href="http://www.terabyteunlimited.com/utilities.html">http://www.terabyteunlimited.com/utilities.html</a> called BurnCDCC. TeraByte Unlimited provides this software as Freeware.
+</p><p>
+</p><h3><b>Booting FreeBSD</b></h3>
+<p>
+Once you have a bootable CD the next thing you need to do is plop it into your laptop and boot it. It asks four questions while it is booting. The first is the type of boot. There are several variations but in the typical case you will want the default option. It next asks for your keyboard language. There are a lot of options, press the "end" key to get to the bottom of the list and then scroll up to the six "United States of America" options. I expect you will want to select the ISO-8859-1 option. Following that is a keyboard layout question. The first three listed are the "U.S." selections. I expect that the first one is the option you want. The final question selects the type of user environment. There is a text only using the tcsh shell and two graphical environments fluxbox and xfce. If the only reason you are booting this is to use dummynet I think you are better off just using the tsch shell.
+</p><p>
+</p><h3><b>Configuring FreeBSD</b></h3>
+<p>
+Your IP interface will come up with a <span style="color:black;background:#F8F400"><b>DHCP provided IP address</b></span> (assuming there is a DHCP server available). To check the IP address and to change it use the "ifconfig" command. The device name used in the figures "<span style="color:black;background:#00FFFF"><b>bfe0</b></span>" will vary depending on your hardware configuration. You can use the command "ifconfig" will no arguments to list all your IP interfaces.
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# ifconfig <span style="color:black;background:#00FFFF"><b>bfe0</b></span>
+  bfe0: flags=8843<up,broadcast,running,simplex,multicast> mtu 1500
+          options=8<vlan_mtu>       
+          inet6 fe80::212:3fff:fe82:5710%bfe0 prefixlen 64 scopeid 0x2
+          inet <span style="color:black;background:#F8F400"><b>192.168.1.104</b></span> netmask 0xffffff00 broadcast 192.168.1.255
+          ether 00:12:3f:82:57:10                           
+          media: Ethernet autoselect (100baseTX <full-duplex>)
+          status: active                                                  
+  freesbie@freesbie:~#                                                    
+</full-duplex></vlan_mtu></up,broadcast,running,simplex,multicast></pre>
+</td></tr>
+</tbody></table>
+Figure 3 - using ifconfig to check the IP address
+</center>
+<p>
+To change the IP address use the ifconfig command again and just specify a new <span style="color:black;background:#93A9D5"><b>IP address and subnet mask</b></span>.
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# ifconfig bfe0 <span style="color:black;background:#93A9D5"><b>172.16.1.1 netmask 255.255.255.0</b></span>
+  freesbie@freesbie:~# ifconfig bfe0                         
+  bfe0: flags=8843<up,broadcast,running,simplex,multicast> mtu 1500
+          options=8<vlan_mtu>
+          inet6 fe80::212:3fff:fe82:5710%bfe0 prefixlen 64 scopeid 0x2 
+          inet 172.16.1.1 netmask 0xffffff00 broadcast 172.16.1.255
+          ether 00:12:3f:82:57:10
+          media: Ethernet autoselect (100baseTX <full-duplex>)
+          status: active
+  freesbie@freesbie:~#                                                    
+</full-duplex></vlan_mtu></up,broadcast,running,simplex,multicast></pre>
+</td></tr>
+</tbody></table>
+Figure 4 - using ifconfig to change the IP address
+</center>
+<p>
+To add another IP address use the <span style="color:black;background:#8DCB41"><b>add</b></span> option with the ifconfig command and specify another <span style="color:black;background:#FF00FF"><b>IP address and subnet mask</b></span>.
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# ifconfig bfe0 <span style="color:black;background:#8DCB41"><b>add</b></span> <span style="color:black;background:#FF00FF"><b>192.168.1.1 netmask 255.255.255.0</b></span>
+  freesbie@freesbie:~# ifconfig bfe0
+  bfe0: flags=8843<up,broadcast,running,simplex,multicast> mtu 1500
+          options=8<vlan_mtu>
+          inet6 fe80::212:3fff:fe82:5710%bfe0 prefixlen 64 scopeid 0x2 
+          inet 172.16.1.1 netmask 0xffffff00 broadcast 172.16.1.255
+          inet 192.168.1.1 netmask 0xffffff00 broadcast 192.168.1.255
+          ether 00:12:3f:82:57:10
+          media: Ethernet autoselect (100baseTX <full-duplex>)
+          status: active
+  freesbie@freesbie:~#                                                    
+</full-duplex></vlan_mtu></up,broadcast,running,simplex,multicast></pre>
+</td></tr>
+</tbody></table>
+Figure 5 - adding another IP address to the interface
+</center>
+<p>
+At this point the laptop should be able to communicate with both PCs each on their own network.  
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# ping -c 3 172.16.1.2
+  PING 172.16.1.2 (172.16.1.2): 56 data bytes
+  64 bytes from 172.16.1.2: icmp_seq=0 ttl=128 time=0.500 ms
+  64 bytes from 172.16.1.2: icmp_seq=1 ttl=128 time=0.336 ms
+  64 bytes from 172.16.1.2: icmp_seq=2 ttl=128 time=0.337 ms
+
+  --- 172.16.1.2 ping statistics ---
+  3 packets transmitted, 3 packets received, 0% packet loss
+  round-trip min/avg/max/stddev = 0.336/0.391/0.500/0.077 ms
+
+  freesbie@freesbie:~# ping -c 3 192.168.1.2
+  PING 192.168.1.2 (192.168.1.2): 56 data bytes
+  64 bytes from 192.168.1.2: icmp_seq=0 ttl=64 time=0.474 ms
+  64 bytes from 192.168.1.2: icmp_seq=1 ttl=64 time=0.340 ms
+  64 bytes from 192.168.1.2: icmp_seq=2 ttl=64 time=0.410 ms
+
+  --- 192.168.1.2 ping statistics ---
+  3 packets transmitted, 3 packets received, 0% packet loss
+  round-trip min/avg/max/stddev = 0.340/0.408/0.474/0.055 ms
+  freesbie@freesbie:~#                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 6 - ping demonstrates the laptop can reach both PCs
+</center>
+<p>
+By default FreeBSD does not forward packets from one network to another. In order to make it do that you need to set the <span style="color:black;background:#F8F400"><b>net.inet.ip.forwarding variable to 1</b></span> with the sysctl command
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# sysctl net.inet.ip.forwarding
+  net.inet.ip.forwarding: 0
+  freesbie@freesbie:~# <span style="color:black;background:#F8F400"><b>sysctl net.inet.ip.forwarding=1</b></span>
+  net.inet.ip.forwarding: 0 -&gt; 1
+  freesbie@freesbie:~# sysctl net.inet.ip.forwarding
+  net.inet.ip.forwarding: 1
+  freesbie@freesbie:~#                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 7 - turning the laptop into a router with sysctl
+</center>
+<p>
+Once each PC is configured to use the laptop as its gateway to the other PC's network the two PCs should be able to communicate with other. However, the network that links the PCs is still effectively a LAN and indicated by the <span style="color:black;background:#00FFFF"><b>extremely fast round trip time</b></span>.
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  C:\&gt; ping 172.16.1.2
+
+  Pinging 172.16.1.2 with 32 bytes of data:
+
+  Reply from 172.16.1.2: bytes=32 time<span style="color:black;background:#00FFFF"><b>&lt;1ms</b></span> TTL=127
+  Reply from 172.16.1.2: bytes=32 time<span style="color:black;background:#00FFFF"><b>&lt;1ms</b></span> TTL=127
+  Reply from 172.16.1.2: bytes=32 time<span style="color:black;background:#00FFFF"><b>&lt;1ms</b></span> TTL=127
+  Reply from 172.16.1.2: bytes=32 time<span style="color:black;background:#00FFFF"><b>&lt;1ms</b></span> TTL=127
+
+  Ping statistics for 172.16.1.2:
+      Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+  Approximate round trip times in milli-seconds:
+      Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+  C:\&gt;                                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 8 - ping demonstrates that the laptop is now a router
+</center>
+<p>
+</p><h3><b>Configuring Dummynet</b></h3>
+Before you can configure Dummynet you need to load it with the kldload command
+<p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# kldload dummynet
+  freesbie@freesbie:~#                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 9 - loading Dummynet
+</center>
+<p>
+Dummynet slides itself on top of the ipfw firewall which is running by default. You use the ipfw command to control both the firewall which is used to select packets and send them to Dummynet and Dummynet  itself. The following commands flush all firewall rules then create rule number <span style="color:black;background:#93A9D5"><b>3000</b></span> which applies to <span style="color:black;background:#93A9D5"><b>any IP packet</b></span>. Those packets are sent to <span style="color:black;background:#8DCB41"><b>pipe 1</b></span> where dummy net applies a <span style="color:black;background:#8DCB41"><b>250ms delay</b></span>.
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# ipfw flush
+  Are you sure? [yn] y
+
+  Flushed all rules.
+  freesbie@freesbie:~# ipfw add <span style="color:black;background:#93A9D5"><b>3000</b></span> <span style="color:black;background:#8DCB41"><b>pipe 1</b></span> <span style="color:black;background:#93A9D5"><b>ip from any to any</b></span>
+  03000 pipe 1 ip from any to any
+  freesbie@freesbie:~# ipfw <span style="color:black;background:#8DCB41"><b>pipe 1</b></span> config <span style="color:black;background:#8DCB41"><b>delay 250ms</b></span>
+  freesbie@freesbie:~#                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 10 - Configuring Dummynet to increase delay between PCs
+</center>
+<p>
+Note that now when one PC pings the other the delay is <span style="color:black;background:#FF00FF"><b>999ms</b></span>. The reason for the 4x increase is that the rule is applied 4 times as the request packet is received and sent out and the reply is received and sent out.
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  C:\&gt;ping 172.16.1.2
+
+  Pinging 172.16.1.2 with 32 bytes of data:
+
+  Reply from 172.16.1.2: bytes=32 time=<span style="color:black;background:#FF00FF"><b>999ms</b></span> TTL=127
+  Reply from 172.16.1.2: bytes=32 time=<span style="color:black;background:#FF00FF"><b>999ms</b></span> TTL=127
+  Reply from 172.16.1.2: bytes=32 time=<span style="color:black;background:#FF00FF"><b>999ms</b></span> TTL=127
+  Reply from 172.16.1.2: bytes=32 time=<span style="color:black;background:#FF00FF"><b>999ms</b></span> TTL=127
+
+  Ping statistics for 172.16.1.2:
+      Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+  Approximate round trip times in milli-seconds:
+      Minimum = 999ms, Maximum = 999ms, Average = 999ms
+  C:\&gt;                                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 11 - Configured delay multiples by 4
+</center>
+<p>
+To apply the rule only once include the packet's <span style="color:black;background:#F8F400"><b>source</b></span> and <span style="color:black;background:#00FFFF"><b>destination</b></span> addresses in the rule that selects the packets. Dummynet will still see each packet twice. Once as it comes into the laptop and once as it leaves the laptop. So you also need to include a direction. I typically chose "<span style="color:black;background:#8DCB41"><b>in</b></span>". The new rule now looks like this:
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# ipfw add 3000 pipe 1 ip <span style="color:black;background:#F8F400"><b>from 172.16.1.2</b></span> <span style="color:black;background:#00FFFF"><b>to 192.168.1.2</b></span> <span style="color:black;background:#8DCB41"><b>in</b></span>  
+  freesbie@freesbie:~#                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 12 - Firewall rule to select packet only 1 packet
+</center>
+<p>
+The delay is now the configured <span style="color:black;background:#FF00FF"><b>250 ms</b></span>, or at least pretty close to that.
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  C:\&gt;ping 172.16.1.2
+
+  Pinging 172.16.1.2 with 32 bytes of data:
+
+  Reply from 172.16.1.2: bytes=32 time=<span style="color:black;background:#FF00FF"><b>249ms</b></span> TTL=127
+  Reply from 172.16.1.2: bytes=32 time=<span style="color:black;background:#FF00FF"><b>250ms</b></span> TTL=127
+  Reply from 172.16.1.2: bytes=32 time=<span style="color:black;background:#FF00FF"><b>250ms</b></span> TTL=127
+  Reply from 172.16.1.2: bytes=32 time=<span style="color:black;background:#FF00FF"><b>249ms</b></span> TTL=127
+
+  Ping statistics for 172.16.1.2:
+      Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+  Approximate round trip times in milli-seconds:
+      Minimum = 249ms, Maximum = 250ms, Average = 249ms
+  C:\&gt;                                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 13 - What delay looks like when firewall rule is correct
+</center>
+<p>
+The firewall rules for selecting packets can be pretty complex but for a simple WAN emulation I thing that rule is adequate. For more details you can take a look <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/firewalls-ipfw.html">http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/firewalls-ipfw.html</a>.
+</p><p>
+Besides delay the other major component of a WAN is the packet loss rate, i.e. what percentage of packets are dropped. This is specified with the <span style="color:black;background:#F8F400"><b>plr</b></span> option and can be appended to the rule that specified the delay. A 0 means 0 loss and a 1 means 100% loss. In this example I've used .5 for 50%. Note that this is a controlled by a probably function not a straight count. As a result in my 4 ping output I've actually lost 75% of the packets. In a longer run I would expect the results to be closer to 50%.
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# ipfw pipe 1 config delay 250ms <span style="color:black;background:#F8F400"><b>plr</b></span> .5
+  freesbie@freesbie:~#                                                    
+
+    C:\&gt;ping 172.16.1.2
+
+  Pinging 172.16.1.2 with 32 bytes of data:
+
+  Request timed out.
+  Request timed out.
+  Reply from 172.16.1.2: bytes=32 time=250ms TTL=127
+  Request timed out.
+
+  Ping statistics for 172.16.1.2:
+      Packets: Sent = 4, Received = 1, Lost = 3 (75% loss),
+  Approximate round trip times in milli-seconds:
+      Minimum = 250ms, Maximum = 250ms, Average = 250ms
+  C:\&gt;                                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 14 - Configuring Dummynet to increase delay between PCs and have a random packet loss of 50%
+</center>
+<p>
+If your application sends a lot of packets at a time, i.e. image or file transfer you should also specify the <span style="color:black;background:#00FFFF"><b>bandwidth</b></span>. 
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>  freesbie@freesbie:~# ipfw pipe 1 config delay 250ms <span style="color:black;background:#00FFFF"><b>bw 1544Kbits/s</b></span>
+  freesbie@freesbie:~#                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 15 - Configuring Dummynet to increase delay between PCs and change the bandwidth to 1.544Mbps (T1)
+</center>
+<p>
+You can use either Kbits/s or Mbits/sec as a unit but I noticed that fractional numbers caused dummynet problems. For example 1544Kbits/s worked fine as a bandwidth but 1.544Mbits/sec resulted in no packets being forwarded. I'm not sure if this is a bug or a feature.
+</p><p>
+Here are some example FTP's
+</p><p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>E:\&gt;ftp 192.168.1.2
+Connected to 192.168.1.2.
+. . .
+ftp&gt; put pict1350.jpg
+200 Port command received
+150 Opening data connection
+226 Transfer complete
+ftp: 1112032 bytes sent in 0.16Seconds 6907.03Kbytes/sec.
+ftp&gt;                                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 16 - FTP of a file with no delays, packet loss or bandwidth limitations
+</center>
+<p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>ipfw pipe 1 config bw 1544Kbits/s
+
+E:\&gt;ftp 192.168.1.2
+Connected to 192.168.1.2.
+. . .
+ftp&gt; put pict1350.jpg
+200 Port command received
+150 Opening data connection
+226 Transfer complete
+ftp: 1112032 bytes sent in 7.16Seconds 155.31Kbytes/sec.
+ftp&gt;                                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 17 - FTP of a file with no delays, packet loss and a bandwidth of 1.544Mbps
+</center>
+<p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>ipfw pipe 1 config bw 56Kbits/s
+
+E:\&gt;ftp 192.168.1.2
+Connected to 192.168.1.2.
+. . .
+ftp&gt; put pict1350.jpg
+200 Port command received
+150 Opening data connection
+226 Transfer complete
+ftp: 1112032 bytes sent in 172.73Seconds 6.44Kbytes/sec.
+ftp&gt;                                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 18 - FTP of a file with no delays, packet loss and a bandwidth of 56Kbps
+</center>
+<p>
+</p><center>
+<table border="5">
+<tbody><tr><td align="left">
+<pre>ipfw pipe 1 config delay 250ms plr .01 bw 1544Kbits/s
+
+E:\&gt;ftp 192.168.1.2
+Connected to 192.168.1.2.
+. . .
+ftp&gt; put pict1350.jpg
+200 Port command received
+150 Opening data connection
+226 Transfer complete
+ftp: 1112032 bytes sent in 19.83Seconds 56.08Kbytes/sec.
+ftp&gt;                                                                    
+</pre>
+</td></tr>
+</tbody></table>
+Figure 19 - FTP of a file with 250 ms delay, 1% packet loss and a bandwidth of 1.544Mbps
+</center>
+<h3><b>Further Documentation </b></h3>
+<p>
+Besides the referenced web pages take a look at the man page for ipfw (man ipfw) on the laptop. It includes not only details on the firewall rule sets that you can construct but a great deal of detail on the dummynet parameters for controlling the WAN. The Dummynet man page by contrast is not very informative.
+</p><p>
+</p><h3><b>Summary of commands</b></h3>
+<p>
+Note the actual values of the IP addresses and subnet masks and the delay, packet loss and bandwidth values will vary depending on your test environment and the WAN you are trying to simulate.
+</p><p>
+</p><table border="5">
+<tbody><tr><td width="45%">ifconfig bfe0 172.16.1.1 netmask 255.255.255.0</td><td>Configure IP interface with IP address on network of first PC</td></tr><tr>
+</tr><tr><td>ifconfig bfe0 add 192.168.1.5 netmask 255.255.255.0</td><td>Add to the IP interface an IP address on network of the second PC</td></tr>
+<tr><td>sysctl net.inet.ip.forwarding=1</td><td>Tell FreeBSD to forward packets between the two IP addresses</td></tr>
+<tr><td>kldload dummynet</td><td>Load Dummynet</td></tr>
+<tr><td>ipfw flush</td><td>Flush all firewall rules to start with a clean configuration</td></tr>
+<tr><td>ipfw add 3000 pipe 1 ip from 172.16.1.2 to 192.168.1.2 in</td><td>Add a firewall rule to select incoming packets from the first PC to the second</td></tr><tr>
+</tr><tr><td>ipfw pipe 1 config delay 250ms plr .01 bw 1544Kbits/s</td><td>Add a Dummynet rule to delay selected packets by 250 ms, randomly drop 1% of the packets and limit the bandwidth to 1.544 Mbps</td></tr>
+</tbody></table>
+<p>
+There are many other things that you can do with Dummynet, for example simulate multiple paths through the network. However just using the delay, packet loss and bandwidth options will give you a pretty good idea of how your application will work over your WAN.
+</p><h5><center>
+<img src="./Using Dummynet_files/bluebar.gif" width="576" height="14" alt="Blue Bar separator">
+<br>
+This page was last modified on 06-03-09</center></h5>
+
+<a href="mailto:ndav1@cox.net"><img src="./Using Dummynet_files/mailbox.gif" width="32" height="32" alt="mailbox" align="left" hspace="3">
+Send comments and suggestions
+<br>
+to ndav1@cox.net
+</a>
+
+
+</body></html>

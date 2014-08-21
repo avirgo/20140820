@@ -1,0 +1,36 @@
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+number of args 1
+Connecting to t3://localhost:3389 with userid weblogic ...
+Successfully connected to Admin Server 'AdminServer' that belongs to domain 'cms'.
+
+Warning: An insecure protocol was used to connect to the 
+server. To ensure on-the-wire security, the SSL port or 
+Admin port should be used instead.
+
+Location changed to serverRuntime tree. This is a read-only tree with DomainMBean as the root. 
+For more help, use help(domainConfig)
+
+t3://172.16.130.5:50361
+Connecting to t3://172.16.130.5:50361 with userid weblogic ...
+Successfully connected to managed Server 'lin-179' that belongs to domain 'cms'.
+
+Warning: An insecure protocol was used to connect to the 
+server. To ensure on-the-wire security, the SSL port or 
+Admin port should be used instead.
+
+Location changed to serverRuntime tree. This is a read-only tree with ServerRuntimeMBean as the root. 
+For more help, use help(serverRuntime)
+
+
+Taking Thread Dump :  lin-179
+t3://172.16.130.4:50361
+
+Taking Thread Dump :  lin-178
+lin-179: HEALTH_WARN [ThreadPool has stuck threads] Tot: 59, Idl: 10, STUCK: 33, Hog: 19, Pen: 0, OScks: 130, SThrpt: 4.496
+lin-178: HEALTH_WARN [ThreadPool has stuck threads] Tot: 72, Idl: 7, STUCK: 39, Hog: 26, Pen: 0, OScks: 151, SThrpt: 4.995

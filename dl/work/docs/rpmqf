@@ -1,0 +1,1 @@
+rpm -qa --qf "%{INSTALLTIME}\t%{INSTALLTIME:date}\t%{NAME}-%{VERSION}.%{RELEASE}.%{ARCH}\n"|sort -n

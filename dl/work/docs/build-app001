@@ -1,0 +1,78 @@
+umask 077;[ ! -d .ssh ] && mkdir .ssh || : ;[ ! -f .ssh/authorized_keys ] && echo ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA1/mUq92hDIQpBkifOH2mhr8zUQIMvW8vsqWNjnWCIrcdABchMjMvd7faxSrCBmgueEs0wZAFoVl0BscCxlOMCfu9+TdkUM6myZRECxWccG7EV0VeL8vGi8f3ctfoA7+Ps1mAJryiE0mfWPdYEsEHh0fxaS64a7tFMRLIRzMh1OI0U5hOGkOCJuN1+hOjGfUO8UTWkUJxEGei38W2ee5eoGLu+85HLVlcOv7DikWXURa9nklO3UyKYg5Y8X83PpPVt/PCh0aQCc1nZevqItvS0gq3dFpj0wzn+MfL3KEcPAoootile/9RhPKcsBdlUuUhy1UbvIvZBHAtiJnEGwuhJw== rsa-key-20140421 > .ssh/authorized_keys || :
+sed -re 's/^.*\/tmp.*$/tmpfs \/tmp tmpfs defaults,size=4096M 0 0/g' /etc/fstab
+umount /tmp
+mount /tmp
+echo -e 'n\np\n1\n\n\np\nw'|fdisk /dev/sdb
+echo -e 'n\np\n1\n\n\np\nw'|fdisk /dev/sdc
+pvcreate /dev/sdb1 /dev/sdc1
+pvcreate /dev/sdb1 /dev/sdc1
+vgcreate --physicalextentsize=64k VGsys1 /dev/sdb1
+vgcreate --physicalextentsize=32k VGdata1 /dev/sdc1
+lvcreate -l 200000 --name LVvar VGsys1
+mkfs.ext4 -L var /dev/mapper/VGsys1-LVvar 
+lvcreate -l 848475 --name LVhome VGsys1
+mkfs.ext4 -L home /dev/mapper/VGsys1-LVhome 
+for i in /dev/mapper/VGsys1-LV*;do echo $i /${i/*-LV/}  ext4    defaults        1 1 >>/etc/fstab; done
+VG=VGdata1;cat lvcr.txt|while read -a l;do lvcreate --extents ${l[0]} --name ${l[2]} ${VG};mkfs.ext4 -L ${l[1]} /dev/${VG}/${l[2]};echo "/dev/mapper/${VG}-${l[2]} ${l[3]} ext4    defaults        1 1" >>/tmp/fstab; [ ! -d ${l[3]} ] && mkdir -p ${l[3]} ;done
+
+sed -re 's/^.*\/tmp.*$/tmpfs \/tmp tmpfs defaults,size=4096M 0 0/g' /etc/fstab
+sed -i 's/\/ocdctm/\/opt\/customer\/dctm/g;s/\/idsxsrctmp/\/idsx_source_temp/g' /etc/fstab
+
+for i in $(grep "^/dev/mapper" /etc/fstab|awk '{print $2}');do [ ! -d $i ] && mkdir -p $i;done
+
+/etc/init.d/rsyslog stop
+/etc/init.d/crond stop
+service snmpd stop
+service auditd stop
+rm -f /var/log/maillog-* /var/log/messages-* /var/log/secure-* /var/log/spooler-* /var/log/cron-*
+> /var/log/messages
+> /var/log/maillog
+> /var/log/spooler
+> /var/log/secure
+> /var/log/cron
+> /var/log/btmp
+> /var/log/yum.log
+> /var/log/wtmp
+rm -f /var/log/sa/*
+mkdir -p /opt/customer/dctm
+mount /dev/mapper/VGsys1-LVvar /mnt
+cd /var
+rsync -av . /mnt/
+cd /
+mv var tvar
+mkdir /var
+
+for i in $(chkconfig --list|grep abr|cut -f1 -d" ");do chkconfig --list $i;chkconfig $i off;chkconfig --list $i;done
+
+/usr/sbin/useradd -m -u 500 -s /bin/bash -c 'cmsadmin' -p '$1$W9SbHEXD$i8nrUtOExop0/8ZrcfI5x/' cmsadmin
+/usr/sbin/useradd -m -u 3000 -s /bin/bash -c 'DCTM' -p '$1$TYqiSS9t$YYByeSufut/pL4n2zXLsS.' dctm
+/usr/sbin/useradd -m -u 9002 -s /bin/bash -c 'rreddy' -p '$1$d08hLzbo$./uqEu9RDl6sKu9zZqdEH1' rreddy
+/usr/sbin/useradd -m -u 9003 -s /bin/bash -c 'mmoritomo' -p '$1$UisfWWs7$2JYuCbm3ngOofjw5JnHEM.' mmoritomo
+/usr/sbin/useradd -m -u 10007 -s /bin/bash -c 'neeraj' -p '$1$3cNpSPiM$Cu7KnU5nTpvh3ihA3DqM7.' neeraj
+/usr/sbin/useradd -m -u 10034 -s /bin/bash -c 'nathanr' -p '$1$pRcmJCKE$pDPuw8bfd81KvdJgbTn9r/' nathanr
+/usr/sbin/useradd -m -u 10499 -s /bin/bash -c 'Tony Virgo' -p '$1$OsIFMrse$tIuRKLYzhSLs3CU0bTY9P/' tvirgo
+/usr/sbin/useradd -m -u 10509 -s /bin/bash -c 'DIVYAM +011918826098246 DivyamS@hcl.com' -p '$1$XM8tvbnX$icJjAiYrwuGeh1v6BlFc2.' divyam
+
+/usr/sbin/useradd -m -u 500 -s /bin/bash -c 'cmsadmin' -p '$1$W9SbHEXD$i8nrUtOExop0/8ZrcfI5x/' cmsadmin
+/usr/sbin/useradd -m -u 3000 -s /bin/bash -c 'DCTM' -p '$1$azbCEdaX$hE.DJjJHMHImIC1vdMJ9t.' dctm
+/usr/sbin/useradd -m -u 9002 -s /bin/bash -c 'rreddy' -p '$1$d08hLzbo$./uqEu9RDl6sKu9zZqdEH1' rreddy
+/usr/sbin/useradd -m -u 9003 -s /bin/bash -c 'mmoritomo' -p '$1$UisfWWs7$2JYuCbm3ngOofjw5JnHEM.' mmoritomo
+/usr/sbin/useradd -m -u 10007 -s /bin/bash -c 'neeraj' -p '$1$GKBBi6wc$lh9WA35DLieF48hU/fHBc0' neeraj
+/usr/sbin/useradd -m -u 10034 -s /bin/bash -c 'nathanr' -p '$1$pRcmJCKE$pDPuw8bfd81KvdJgbTn9r/' nathanr
+/usr/sbin/useradd -m -u 10499 -s /bin/bash -c 'Tony Virgo' -p '$1$OsIFMrse$tIuRKLYzhSLs3CU0bTY9P/' tvirgo
+/usr/sbin/useradd -m -u 10509 -s /bin/bash -c 'DIVYAM +011918826098246 DivyamS@hcl.com' -p '$1$XM8tvbnX$icJjAiYrwuGeh1v6BlFc2.' divyam
+/usr/sbin/useradd -m -u 32 -s /bin/bash -c 'Rpcbind Daemon' -p '!!' rpc
+/usr/sbin/useradd -m -u 29 -s /bin/bash -c 'RPC Service User' -p '!!' rpcuser
+/usr/sbin/useradd -m -u 65534 -s /bin/bash -c 'Anonymous NFS User' -p '!!' nfsnobody
+/usr/sbin/useradd -m -u 3001 -s /bin/bash -c '' -p 'vgd.lIVPWLizZDFa1' oracle
+
+cat <<EOF >>/etc/sudoers
+mmoritomo          ALL = NOPASSWD: ALL
+nathanr          ALL = (ALL)     ALL
+neeraj        ALL = /bin/su - dctm, /bin/su - cmsadmin
+rreddy          ALL = (ALL)     ALL
+tvirgo          ALL=(ALL)       NOPASSWD: ALL
+EOF
+
+chown -R dctm:dctm /bocs_data/ /idsx_target_temp/ /xplore_data/ /opt/customer/dctm/
+

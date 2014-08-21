@@ -1,0 +1,167 @@
+dnsdomainname: Unknown host
+dnsdomainname: Unknown host
+[0;37mdebug: Creating default schedules[0m
+[0;37mdebug: Puppet::Type::User::ProviderPw: file pw does not exist[0m
+[0;37mdebug: Puppet::Type::User::ProviderDirectoryservice: file /usr/bin/dscl does not exist[0m
+[0;37mdebug: Puppet::Type::User::ProviderUser_role_add: file roleadd does not exist[0m
+[0;37mdebug: Failed to load library 'ldap' for feature 'ldap'[0m
+[0;37mdebug: Puppet::Type::User::ProviderLdap: feature ldap is missing[0m
+[0;37mdebug: /File[/var/log/puppet]/seluser: Found seluser default 'system_u' for /var/log/puppet[0m
+[0;37mdebug: /File[/var/log/puppet]/selrole: Found selrole default 'object_r' for /var/log/puppet[0m
+[0;37mdebug: /File[/var/log/puppet]/seltype: Found seltype default 'puppet_log_t' for /var/log/puppet[0m
+[0;37mdebug: /File[/var/log/puppet]/selrange: Found selrange default 's0' for /var/log/puppet[0m
+[0;37mdebug: /File[/var/lib/puppet/client_yaml]/seluser: Found seluser default 'system_u' for /var/lib/puppet/client_yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/client_yaml]/selrole: Found selrole default 'object_r' for /var/lib/puppet/client_yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/client_yaml]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/client_yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/client_yaml]/selrange: Found selrange default 's0' for /var/lib/puppet/client_yaml[0m
+[0;37mdebug: /File[/var/lib/puppet]/seluser: Found seluser default 'system_u' for /var/lib/puppet[0m
+[0;37mdebug: /File[/var/lib/puppet]/selrole: Found selrole default 'object_r' for /var/lib/puppet[0m
+[0;37mdebug: /File[/var/lib/puppet]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet[0m
+[0;37mdebug: /File[/var/lib/puppet]/selrange: Found selrange default 's0' for /var/lib/puppet[0m
+[0;37mdebug: /File[/var/lib/puppet/lib]/seluser: Found seluser default 'system_u' for /var/lib/puppet/lib[0m
+[0;37mdebug: /File[/var/lib/puppet/lib]/selrole: Found selrole default 'object_r' for /var/lib/puppet/lib[0m
+[0;37mdebug: /File[/var/lib/puppet/lib]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/lib[0m
+[0;37mdebug: /File[/var/lib/puppet/lib]/selrange: Found selrange default 's0' for /var/lib/puppet/lib[0m
+[0;37mdebug: /File[/var/run/puppet]/seluser: Found seluser default 'system_u' for /var/run/puppet[0m
+[0;37mdebug: /File[/var/run/puppet]/selrole: Found selrole default 'object_r' for /var/run/puppet[0m
+[0;37mdebug: /File[/var/run/puppet]/seltype: Found seltype default 'puppet_var_run_t' for /var/run/puppet[0m
+[0;37mdebug: /File[/var/run/puppet]/selrange: Found selrange default 's0' for /var/run/puppet[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certificate_requests]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/certificate_requests[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certificate_requests]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/certificate_requests[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certificate_requests]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/certificate_requests[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certificate_requests]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/certificate_requests[0m
+[0;37mdebug: /File[/var/lib/puppet/state/state.yaml]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state/state.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/state/state.yaml]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state/state.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/state/state.yaml]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state/state.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/state/state.yaml]/selrange: Found selrange default 's0' for /var/lib/puppet/state/state.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys/tony-vdesk.peroot.com.pem]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/public_keys/tony-vdesk.peroot.com.pem[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys/tony-vdesk.peroot.com.pem]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/public_keys/tony-vdesk.peroot.com.pem[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys/tony-vdesk.peroot.com.pem]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/public_keys/tony-vdesk.peroot.com.pem[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys/tony-vdesk.peroot.com.pem]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/public_keys/tony-vdesk.peroot.com.pem[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl[0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_report.yaml]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state/last_run_report.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_report.yaml]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state/last_run_report.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_report.yaml]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state/last_run_report.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_report.yaml]/selrange: Found selrange default 's0' for /var/lib/puppet/state/last_run_report.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys/tony-vdesk.peroot.com.pem]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/private_keys/tony-vdesk.peroot.com.pem[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys/tony-vdesk.peroot.com.pem]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/private_keys/tony-vdesk.peroot.com.pem[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys/tony-vdesk.peroot.com.pem]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/private_keys/tony-vdesk.peroot.com.pem[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys/tony-vdesk.peroot.com.pem]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/private_keys/tony-vdesk.peroot.com.pem[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/public_keys[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/public_keys[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/public_keys[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/public_keys[0m
+[0;37mdebug: /File[/var/lib/puppet/clientbucket]/seluser: Found seluser default 'system_u' for /var/lib/puppet/clientbucket[0m
+[0;37mdebug: /File[/var/lib/puppet/clientbucket]/selrole: Found selrole default 'object_r' for /var/lib/puppet/clientbucket[0m
+[0;37mdebug: /File[/var/lib/puppet/clientbucket]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/clientbucket[0m
+[0;37mdebug: /File[/var/lib/puppet/clientbucket]/selrange: Found selrange default 's0' for /var/lib/puppet/clientbucket[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/private_keys[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/private_keys[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/private_keys[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/private_keys[0m
+[0;37mdebug: /File[/var/lib/puppet/state]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state[0m
+[0;37mdebug: /File[/var/lib/puppet/state]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state[0m
+[0;37mdebug: /File[/var/lib/puppet/state]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state[0m
+[0;37mdebug: /File[/var/lib/puppet/state]/selrange: Found selrange default 's0' for /var/lib/puppet/state[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certs]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/certs[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certs]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/certs[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certs]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/certs[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certs]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/certs[0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_summary.yaml]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state/last_run_summary.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_summary.yaml]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state/last_run_summary.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_summary.yaml]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state/last_run_summary.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_summary.yaml]/selrange: Found selrange default 's0' for /var/lib/puppet/state/last_run_summary.yaml[0m
+[0;37mdebug: /File[/var/lib/puppet/client_data]/seluser: Found seluser default 'system_u' for /var/lib/puppet/client_data[0m
+[0;37mdebug: /File[/var/lib/puppet/client_data]/selrole: Found selrole default 'object_r' for /var/lib/puppet/client_data[0m
+[0;37mdebug: /File[/var/lib/puppet/client_data]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/client_data[0m
+[0;37mdebug: /File[/var/lib/puppet/client_data]/selrange: Found selrange default 's0' for /var/lib/puppet/client_data[0m
+[0;37mdebug: /File[/var/lib/puppet/facts]/seluser: Found seluser default 'system_u' for /var/lib/puppet/facts[0m
+[0;37mdebug: /File[/var/lib/puppet/facts]/selrole: Found selrole default 'object_r' for /var/lib/puppet/facts[0m
+[0;37mdebug: /File[/var/lib/puppet/facts]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/facts[0m
+[0;37mdebug: /File[/var/lib/puppet/facts]/selrange: Found selrange default 's0' for /var/lib/puppet/facts[0m
+[0;37mdebug: /File[/var/lib/puppet/state/graphs]/seluser: Found seluser default 'system_u' for /var/lib/puppet/state/graphs[0m
+[0;37mdebug: /File[/var/lib/puppet/state/graphs]/selrole: Found selrole default 'object_r' for /var/lib/puppet/state/graphs[0m
+[0;37mdebug: /File[/var/lib/puppet/state/graphs]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/state/graphs[0m
+[0;37mdebug: /File[/var/lib/puppet/state/graphs]/selrange: Found selrange default 's0' for /var/lib/puppet/state/graphs[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private]/seluser: Found seluser default 'system_u' for /var/lib/puppet/ssl/private[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private]/selrole: Found selrole default 'object_r' for /var/lib/puppet/ssl/private[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/ssl/private[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private]/selrange: Found selrange default 's0' for /var/lib/puppet/ssl/private[0m
+[0;37mdebug: /File[/etc/puppet]/seluser: Found seluser default 'system_u' for /etc/puppet[0m
+[0;37mdebug: /File[/etc/puppet]/selrole: Found selrole default 'object_r' for /etc/puppet[0m
+[0;37mdebug: /File[/etc/puppet]/seltype: Found seltype default 'puppet_etc_t' for /etc/puppet[0m
+[0;37mdebug: /File[/etc/puppet]/selrange: Found selrange default 's0' for /etc/puppet[0m
+[0;37mdebug: /File[/var/lib/puppet/ssl]: Autorequiring File[/var/lib/puppet][0m
+[0;37mdebug: /File[/var/lib/puppet/clientbucket]: Autorequiring File[/var/lib/puppet][0m
+[0;37mdebug: /File[/var/lib/puppet/client_yaml]: Autorequiring File[/var/lib/puppet][0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certificate_requests]: Autorequiring File[/var/lib/puppet/ssl][0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys]: Autorequiring File[/var/lib/puppet/ssl][0m
+[0;37mdebug: /File[/var/lib/puppet/lib]: Autorequiring File[/var/lib/puppet][0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private_keys/tony-vdesk.peroot.com.pem]: Autorequiring File[/var/lib/puppet/ssl/private_keys][0m
+[0;37mdebug: /File[/var/lib/puppet/state]: Autorequiring File[/var/lib/puppet][0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_report.yaml]: Autorequiring File[/var/lib/puppet/state][0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys]: Autorequiring File[/var/lib/puppet/ssl][0m
+[0;37mdebug: /File[/var/lib/puppet/client_data]: Autorequiring File[/var/lib/puppet][0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/private]: Autorequiring File[/var/lib/puppet/ssl][0m
+[0;37mdebug: /File[/var/lib/puppet/state/state.yaml]: Autorequiring File[/var/lib/puppet/state][0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/public_keys/tony-vdesk.peroot.com.pem]: Autorequiring File[/var/lib/puppet/ssl/public_keys][0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_summary.yaml]: Autorequiring File[/var/lib/puppet/state][0m
+[0;37mdebug: /File[/var/lib/puppet/facts]: Autorequiring File[/var/lib/puppet][0m
+[0;37mdebug: /File[/var/lib/puppet/state/graphs]: Autorequiring File[/var/lib/puppet/state][0m
+[0;37mdebug: /File[/var/lib/puppet/ssl/certs]: Autorequiring File[/var/lib/puppet/ssl][0m
+[0;37mdebug: /File[/var/lib/puppet/state/last_run_summary.yaml]/seluser: seluser changed 'unconfined_u' to 'system_u'[0m
+[0;37mdebug: Finishing transaction 70001026991240[0m
+[0;37mdebug: Loaded state in 0.00 seconds[0m
+[0;37mdebug: Loaded state in 0.00 seconds[0m
+[0;32minfo: Applying configuration version '1405979174'[0m
+[0;37mdebug: /Schedule[daily]: Skipping device resources because running on a host[0m
+[0;37mdebug: /Schedule[monthly]: Skipping device resources because running on a host[0m
+[0;37mdebug: /Schedule[hourly]: Skipping device resources because running on a host[0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): Opening augeas with root /, lens path , flags 0[0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): Augeas version 1.0.0 is installed[0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): Will attempt to save and only run if files changed[0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): sending command 'set' with params ["/files/etc/sudoers/spec[user = \"neeraj\"]/user", "neeraj"][0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): sending command 'set' with params ["/files/etc/sudoers/spec[user = \"neeraj\"]/host_group/host", "ALL"][0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): sending command 'set' with params ["/files/etc/sudoers/spec[user = \"neeraj\"]/host_group/command[1]", "/bin/su - dctm"][0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): sending command 'set' with params ["/files/etc/sudoers/spec[user = \"neeraj\"]/host_group/command[2]", "/bin/su - cmsprod"][0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): sending command 'set' with params ["/files/etc/sudoers/spec[user = \"neeraj\"]/host_group/command[3]", "/bin/su - root"][0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): Skipping because no files were changed[0m
+[0;37mdebug: Augeas[sudoneeraj](provider=augeas): Closed the augeas connection[0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): Opening augeas with root /, lens path , flags 0[0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): Augeas version 1.0.0 is installed[0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): Will attempt to save and only run if files changed[0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[1]", "dctm"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[1]/type", "soft"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[1]/item", "nproc"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[1]/value", "131072"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[2]", "dctm"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[2]/type", "hard"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[2]/item", "nproc"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[2]/value", "131072"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[3]", "dctm"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[3]/type", "soft"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[3]/item", "nofile"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[3]/value", "131072"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[4]", "dctm"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[4]/type", "hard"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[4]/item", "nofile"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): sending command 'set' with params ["/files/security/limits.conf/spec[domain = \"dctm\"]/domain[4]/value", "131072"][0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): Skipping because no files were changed[0m
+[0;37mdebug: Augeas[limitsdctm](provider=augeas): Closed the augeas connection[0m
+[0;37mdebug: /Schedule[never]: Skipping device resources because running on a host[0m
+[0;37mdebug: /Schedule[weekly]: Skipping device resources because running on a host[0m
+[0;37mdebug: /Schedule[puppet]: Skipping device resources because running on a host[0m
+[0;37mdebug: Finishing transaction 70001039801160[0m
+[0;37mdebug: Storing state[0m
+[0;37mdebug: Stored state in 0.00 seconds[0m
+[0;36mnotice: Finished catalog run in 1.70 seconds[0m
+[0;37mdebug: /File[/var/lib/puppet/rrd]/seluser: Found seluser default 'system_u' for /var/lib/puppet/rrd[0m
+[0;37mdebug: /File[/var/lib/puppet/rrd]/selrole: Found selrole default 'object_r' for /var/lib/puppet/rrd[0m
+[0;37mdebug: /File[/var/lib/puppet/rrd]/seltype: Found seltype default 'puppet_var_lib_t' for /var/lib/puppet/rrd[0m
+[0;37mdebug: /File[/var/lib/puppet/rrd]/selrange: Found selrange default 's0' for /var/lib/puppet/rrd[0m
+[0;37mdebug: Finishing transaction 70001027759520[0m
+[0;37mdebug: Received report to process from tony-vdesk.peroot.com[0m
+[0;37mdebug: Processing report from tony-vdesk.peroot.com with processor Puppet::Reports::Store[0m

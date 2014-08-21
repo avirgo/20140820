@@ -1,0 +1,34 @@
+execfile('t.py')
+dom0
+dom0.Node
+dom0.Document
+dom0
+dom0.documentElement
+dom0.getElements()
+dom0.getElementsByTagName("")
+dom0.getElementsByTagName("*")
+dom0.getElementsByTagName("Link")
+dom0.getElementsByTagName("Link")[0]
+dom0.getElementsByTagName("Link")[0].tagName
+dom0.getElementsByTagName("Link")[0].getElementsByTagName("*")
+dom0.getElementsByTagName("Link")[0].hasAttribute("*")
+dom0.getElementsByTagName("Link")[0].hasAttribute("")
+dom0.getElementsByTagName("Link")[0].getElementsByTagName("")
+dom0.getElementsByTagName("Link")[0].to_string
+dom0.getElementsByTagName("Link")[0]
+print dom0.getElementsByTagName("Link")[0]
+print dom0.getElementsByTagName("Link")[0].*
+print dom0.getElementsByTagName("Link")[0].__str__
+print dir(dom0.getElementsByTagName("Link")[0])
+def dump(obj):
+   for attr in dir(obj):
+       if hasattr( obj, attr ):
+           print( "obj.%s = %s" % (attr, getattr(obj, attr)))
+dump(dom0)
+dump(dom0.getElementsByTagName("Link")[0])
+dump(dom0.getElementsByTagName("Link")[0].attributes)
+dir()
+import readlines
+import readline
+dir(readline)
+readline.write_history_file('h201408081401.txt')

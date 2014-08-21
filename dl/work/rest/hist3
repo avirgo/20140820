@@ -1,0 +1,265 @@
+execfile('u.py')
+dir(dom0)
+dir(dom0.hasChildNodes)
+dom0.hasChildNodes
+dom0.firstChild
+dom0.firstChild.attributes
+dom0.firstChild.getElementsByTagName('Link')
+dom0.getElementsByTagName('Link')
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute('type')
+  print link.getAttribute('type'). link.getAttribute('href')
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute('type'). link.getAttribute('href')
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute('type'), link.getAttribute('href')
+c2=conn.request("GET",'/api/org/10364368-bc29-43ff-a158-7d7d8ee05418',headers=auheaders)
+r2=conn.getresponse()
+
+c2=conn.request("GET",'/api/org/10364368-bc29-43ff-a158-7d7d8ee05418',headers=auheaders)
+auheaders
+headers
+execfile('u.py')
+c2=conn.request("GET",'/api/org/10364368-bc29-43ff-a158-7d7d8ee05418',headers=auheaders)
+r2=conn.getresponse()
+r2.status
+d2=r2.read()
+h2=r2.getheaders()
+h2
+d2
+dom1=parseString(d2)
+for link in dom1.getElementsByTagName('Link'):
+  print link.getAttribute('type'), link.getAttribute('href')
+for link in dom0.getElementsByTagName('Link'):
+execfile('u.py')
+for link in dom1.getElementsByTagName('Org'):
+  print link.type, link.name, link.href
+for link in dom1.getElementsByTagName('OrgList'):
+  print link.type, link.name, link.href
+  print link.name, link.href
+for link in dom1.getElementsByTagName('OrgList'):
+  print link.name, link.href
+dom1.getElementsByTagName('OrgList')
+dom1.getElementsByTagName('Org')
+dom1.getElementsByTagName('Org').attributes
+dom1.getElementsByTagName('Org').childNodes
+dom1.getElementsByTagName('Org')
+dir(dom1.getElementsByTagName('Org'))
+dom1.getElementsByTagName('Org').count
+dom1.getElementsByTagName('Org')[0]
+dom1.getElementsByTagName('Org')[1]
+dom1.getElementsByTagName('Org')[0].__str__
+c2=conn.request("GET",'/api/org/',headers=auheaders)
+c2
+r2
+r2.status
+d2
+dom0.get
+for link in dom0.getElementsByTagName('Link'):
+  print link
+  print link.type
+for link in dom0.getElementsByTagName('Link'):
+  print link.type
+for link in dom0.getElementsByTagName('Link'):
+  print dir(link)
+  print link.getAttribute['type']
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute['type']
+for link in dom1.getElementsByTagName('Link'):
+  print link.getAttribute('type'), link.getAttribute('href')
+dom1
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute('type'), link.getAttribute('href')
+d1
+history
+import readline
+readline.write_history_file('usession1')
+execfile('u.py')
+orgroot.split('/')
+orgroot.split('/')[-1]
+orgroot.split('/')[-3..-1]
+orgroot.split('/')[-3...-1]
+orgroot.split('/')[-3]
+execfile('u.py')
+dir(orghref)
+"xyzz".join(orghref.split('/')[-1])
+"".join("/api/org",orghref.split('/')[-1])
+"".join(orghref.split('/')[-1])
+dir("")
+concat
+"xyzz" + orghref.split('/')[-1]
+"xyzz" orghref.split('/')[-1]
+"xyzz" str(orghref.split('/')[-1])
+"xyzz" + str(orghref.split('/')[-1])
+"/api/org" + str(orghref.split('/')[-1])
+"/api/org/" + str(orghref.split('/')[-1])
+execfile('u.py')
+>>> for link in dom0.getElementsByTagName('Link'):
+...   print link.getAttribute('type'), link.getAttribute('href')
+... 
+application/vnd.vmware.vcloud.orgList+xml https://lo3-mystack.pearson.com/api/org/
+application/vnd.vmware.vcloud.org+xml https://lo3-mystack.pearson.com/api/org/10364368-bc29-43ff-a158-7d7d8ee05418
+execfile('u.py')
+dir(link)
+dir(e)
+link
+link.nodes
+link.childNodes
+link.attributes
+link.tagName
+link.firstChild
+link.toxml
+link.toprettyxml
+print link.toprettyxml
+print str(link.toprettyxml)
+def dump(obj):
+   for attr in dir(obj):
+       if hasattr( obj, attr ):
+           print( "obj.%s = %s" % (attr, getattr(obj, attr)))
+dump(link)
+dump link
+dump()
+dir()
+def dump(obj):
+   for attr in dir(obj):
+       if hasattr( obj, attr ):
+           print( "obj.%s = %s" % (attr, getattr(obj, attr)))
+dir()
+dump(link)
+link.getAttribute()
+link.getAttribute("*")
+link.getAttribute("type")
+link.getAttribute("rel")
+link.getAttribute("href")
+print d4
+for link in dom3.getElementByTagName('EdgeGatewayRecord')
+for link in dom3.getElementsByTagName('EdgeGatewayRecord'):
+  print link
+for link in dom3.getElementsByTagName('EdgeGatewayRecord'):
+  dump(link)
+link.writexml()
+link.writexml('t.xml')
+dir(link)
+d4
+dir(d4)
+link.writexml(d4)
+link
+dump(link)
+link.getAttribute.Node()
+link.getAttributeNode()
+link.getAttributeNode("*")
+link.getAttributeNode("vdc")
+link.getAttribute("vdc")
+dir(link)
+dir(dom3)
+de3=dom3.documentElement
+dir(de3)
+dump(de3)
+de3=dom3.getElementsByTagName('EdgeGatewayRecord')
+de3
+dump(de3)
+de3.item
+de3.item[0]
+de3.index
+de3.index()
+de3.count()
+de3.count(0)
+de3.count(1)
+de3.sort
+de3.sort()
+de3
+de3.Nodes
+dir(de3)
+de3.length()
+de3.length
+dump(de3)
+str(de3)
+de3
+de3=dom3.getElementsByTagName('EdgeGatewayRecord')
+de3.getAttribute('vdc')
+dom3.getElementsByTagName('EdgeGatewayRecord')
+dir(dom3.getElementsByTagName('EdgeGatewayRecord'))
+de3.hasAttribute('vdc')
+dt=dom3.documentElement
+dir(dt)
+dt.hasAttributes
+dt.hasAttributes()
+dt.Attributes
+dt.Attributes()
+dt.attributes()
+dt.attributes
+for a in dt.attributes:
+   dir(a
+dir(a)
+for a in dt.attributes:
+  dir(a)
+dt.attributes
+dir(dt.attributes)
+dump(dt.attributes)
+dt.attributes[1]
+dt.attributes.item[1]
+dt.attributes.item
+dt.attributes.keys
+for i in dt.attributes.keys:
+  print i
+dom3.Node
+dom3.Nodes
+dt
+dt.nodeType
+dt.attributes
+dt.firstChild
+dt.lastChild
+dt.nodeName
+dt.firstChild
+dt.nodeName
+dt.hasAttributes()
+dt.hasChildNodes()
+dt.attributes.item(0)
+dt.attributes.item(0).nodeType
+dt.attributes.item(0).firstChild
+dt.attributes.item(0)
+dump(dt.attributes.item(0))
+dump(dt.attributes.item(1))
+dump(dt.attributes.item(2))
+dump(dt.attributes.item(3))
+dump(dt.attributes.item(4))
+dump(dt.attributes.item(5))
+dump(dt.attributes.item(6))
+dump(dt.attributes.item(7))
+dump(dt.attributes.item(8))
+dump(dt.attributes.item(9))
+dump(dt)
+dt
+dt=dom3.documentElement
+dt
+d4
+zed="""
+<EdgeGatewayRecord vdc="https://lo3-mystack.pearson.com/api/vdc/05984206-b86d-4911-9e9b-4b21cfd7463a" numberOfOrgNetworks="2" numberOfExtNetworks="1" name="UKCMS-POC-edge-gateway" isBusy="false" haStatus="DOWN" gatewayStatus="READY" href="https://lo3-mystack.pearson.com/api/admin/edgeGateway/967f15dc-6b54-48e1-b4ff-c107cd4f8795" isSyslogServerSettingInSync="true" taskStatus="success" taskOperation="networkConfigureEdgeGatewayServices" task="https://lo3-mystack.pearson.com/api/task/5c429696-6dc2-45e2-bf3c-7227e2bba412" taskDetails=" "/>
+"""
+parseString(zed)
+md=parseString(zed)
+dir(md)
+dump(md)
+dump(md.firstChild)
+dump(md.firstChild.attributes)
+z=md.firstChild.attributes
+dump(z)
+z.items()
+z.items()[0]
+d4
+dom3[0]
+dom3.attributes
+dom3.getElementsByTagName
+dom3.getElementsByTagName('Link')
+dom3.getElementsByTagName('EdgeGatewayRecord')
+dom3.getElementsByTagName('EdgeGatewayRecord').items
+dump(dom3.getElementsByTagName('EdgeGatewayRecord'))
+dom3.getElementsByTagName('EdgeGatewayRecord').item
+dump(dom3.getElementsByTagName('EdgeGatewayRecord').item)
+dom3.getElementsByTagName('EdgeGatewayRecord').item
+dump(dom3.getElementsByTagName('EdgeGatewayRecord'))
+dzzz=dom3.getElementsByTagName('EdgeGatewayRecord')
+dzzz
+z
+dir(readline)
+readline.write_history_file('hist3')

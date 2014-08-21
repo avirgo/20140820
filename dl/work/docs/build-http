@@ -1,0 +1,61 @@
+umask 077;[ ! -d .ssh ] && mkdir .ssh || : ;[ ! -f .ssh/authorized_keys ] && echo ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA1/mUq92hDIQpBkifOH2mhr8zUQIMvW8vsqWNjnWCIrcdABchMjMvd7faxSrCBmgueEs0wZAFoVl0BscCxlOMCfu9+TdkUM6myZRECxWccG7EV0VeL8vGi8f3ctfoA7+Ps1mAJryiE0mfWPdYEsEHh0fxaS64a7tFMRLIRzMh1OI0U5hOGkOCJuN1+hOjGfUO8UTWkUJxEGei38W2ee5eoGLu+85HLVlcOv7DikWXURa9nklO3UyKYg5Y8X83PpPVt/PCh0aQCc1nZevqItvS0gq3dFpj0wzn+MfL3KEcPAoootile/9RhPKcsBdlUuUhy1UbvIvZBHAtiJnEGwuhJw== rsa-key-20140421 > .ssh/authorized_keys || :
+sed -re 's/^.*\/tmp.*$/tmpfs \/tmp tmpfs defaults,size=4096M 0 0/g' /etc/fstab
+umount /tmp
+mount /tmp
+echo -e 'n\np\n1\n\n\np\nw'|fdisk /dev/sdb
+echo -e 'n\np\n1\n\n\np\nw'|fdisk /dev/sdc
+pvcreate /dev/sdb1 /dev/sdc1
+pvcreate /dev/sdb1 /dev/sdc1
+vgcreate --physicalextentsize=64k VGsys1 /dev/sdb1
+vgcreate --physicalextentsize=64k VGdata1 /dev/sdc1
+lvcreate -l 200000 --name LVvar VGsys1
+mkfs.ext4 -L var /dev/mapper/VGsys1-LVvar 
+lvcreate -l 848475 --name LVhome VGsys1
+mkfs.ext4 -L home /dev/mapper/VGsys1-LVhome 
+lvcreate -L 500G --name LVdctm_data VGdata1
+mkfs.ext4 -L dctm_data /dev/mapper/VGdata1-LVdctm_data 
+lvcreate -L 150G --name LVocdctm VGdata1
+mkfs.ext4 -L ocdctm /dev/mapper/VGdata1-LVocdctm 
+lvcreate -L 100G --name LVidsxsrctmp VGdata1
+mkfs.ext4 -L idsx_source_temp /dev/mapper/VGdata1-LVidsxsrctmp 
+for i in /dev/mapper/VGsys1-LV* /dev/mapper/VGdata1-LV*;do echo $i /${i/*LV} ext4 defaults 1 2;done >>/etc/fstab
+sed -re 's/^.*\/tmp.*$/tmpfs \/tmp tmpfs defaults,size=4096M 0 0/g' /etc/fstab
+sed -i 's/\/ocdctm/\/opt\/customer\/dctm/g;s/\/idsxsrctmp/\/idsx_source_temp/g' /etc/fstab
+
+for i in $(grep "^/dev/mapper" /etc/fstab|awk '{print $2}');do [ ! -d $i ] && mkdir -p $i;done
+
+/etc/init.d/rsyslog stop
+/etc/init.d/crond stop
+service snmpd stop
+service auditd stop
+rm -f /var/log/maillog-* /var/log/messages-* /var/log/secure-* /var/log/spooler-* /var/log/cron-*
+> /var/log/messages
+> /var/log/maillog
+> /var/log/spooler
+> /var/log/secure
+> /var/log/cron
+> /var/log/btmp
+> /var/log/yum.log
+> /var/log/wtmp
+rm -f /var/log/sa/*
+ls -l /var/log
+ls -ltr /var/log
+mkdir /dctm_data
+mkdir -p /opt/customer/dctm
+mkdir /idsx_source_temp
+mount /dev/mapper/VGsys1-LVvar /mnt
+cd /var
+rsync -av . /mnt/
+cd /
+mv var tvar
+mkdir /var
+
+chown -R dctm:dctm /dctm_data/ /idsx_source_temp/ /opt/customer/dctm/
+
+cat <<EOF >>/etc/sudoers
+neeraj          ALL = (ALL)     ALL
+divyam          ALL = (ALL)     ALL
+EOF
+
+/usr/sbin/useradd -m -u 10509 -s /bin/bash -c 'DIVYAM +011918826098246 DivyamS@hcl.com' -p '$1$XM8tvbnX$icJjAiYrwuGeh1v6BlFc2.' divyam;grep neeraj /etc/sudoers|sed 's/neeraj/divyam/' >>/etc/sudoers
+

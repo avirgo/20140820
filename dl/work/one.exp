@@ -1,0 +1,23 @@
+set user {$argv1}
+set host {dude2}
+                 expect {
+                     Password: {
+                         stty -echo
+                         send_user "password (for $user) on $host: "
+                         expect_user -re "(.*)\n"
+                         send_user "\n"
+                         send "$expect_out(1,string)\r"
+                         stty echo
+                         exp_continue
+                     } incorrect {
+                         send_user "invalid password or account\n"
+                         exit
+                     } timeout {
+                         send_user "connection to $host timed out\n"
+                         exit
+                     } eof {
+                         send_user \
+                             "connection to host failed: $expect_out(buffer)"
+                         exit
+                     } 
+                 }

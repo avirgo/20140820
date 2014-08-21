@@ -1,0 +1,10 @@
+#!/bin/bash
+dev=${1:?P1 must be device: sda-sdz}
+echo $* $dev
+echo -e 'n\np\n1\n\n\np\nw'|fdisk /dev/$dev
+pvcreate /dev/${dev}1
+vgcreate --physicalextentsize=32k VGdata1 /dev/${dev}1
+VG=VGdata1
+let z=$(($(vgs $VG --noheadings -o vg_free_count)))
+echo $z data1 LVdata1 /nfs_exports/data1|while read -a l;do lvcreate --extents ${l[0]} --name ${l[2]} ${VG};mkfs.ext4 -L ${l[1]} /dev/${VG}/${l[2]};echo "/dev/mapper/${VG}-${l[2]} ${l[3]} ext4    defaults        1 1" >>/tmp/fstab; [ ! -d ${l[3]} ] && mkdir -p ${l[3]} ;done
+

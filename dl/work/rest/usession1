@@ -1,0 +1,76 @@
+execfile('u.py')
+dir(dom0)
+dir(dom0.hasChildNodes)
+dom0.hasChildNodes
+dom0.firstChild
+dom0.firstChild.attributes
+dom0.firstChild.getElementsByTagName('Link')
+dom0.getElementsByTagName('Link')
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute('type')
+  print link.getAttribute('type'). link.getAttribute('href')
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute('type'). link.getAttribute('href')
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute('type'), link.getAttribute('href')
+c2=conn.request("GET",'/api/org/10364368-bc29-43ff-a158-7d7d8ee05418',headers=auheaders)
+r2=conn.getresponse()
+
+c2=conn.request("GET",'/api/org/10364368-bc29-43ff-a158-7d7d8ee05418',headers=auheaders)
+auheaders
+headers
+execfile('u.py')
+c2=conn.request("GET",'/api/org/10364368-bc29-43ff-a158-7d7d8ee05418',headers=auheaders)
+r2=conn.getresponse()
+r2.status
+d2=r2.read()
+h2=r2.getheaders()
+h2
+d2
+dom1=parseString(d2)
+for link in dom1.getElementsByTagName('Link'):
+  print link.getAttribute('type'), link.getAttribute('href')
+for link in dom0.getElementsByTagName('Link'):
+execfile('u.py')
+for link in dom1.getElementsByTagName('Org'):
+  print link.type, link.name, link.href
+for link in dom1.getElementsByTagName('OrgList'):
+  print link.type, link.name, link.href
+  print link.name, link.href
+for link in dom1.getElementsByTagName('OrgList'):
+  print link.name, link.href
+dom1.getElementsByTagName('OrgList')
+dom1.getElementsByTagName('Org')
+dom1.getElementsByTagName('Org').attributes
+dom1.getElementsByTagName('Org').childNodes
+dom1.getElementsByTagName('Org')
+dir(dom1.getElementsByTagName('Org'))
+dom1.getElementsByTagName('Org').count
+dom1.getElementsByTagName('Org')[0]
+dom1.getElementsByTagName('Org')[1]
+dom1.getElementsByTagName('Org')[0].__str__
+c2=conn.request("GET",'/api/org/',headers=auheaders)
+c2
+r2
+r2.status
+d2
+dom0.get
+for link in dom0.getElementsByTagName('Link'):
+  print link
+  print link.type
+for link in dom0.getElementsByTagName('Link'):
+  print link.type
+for link in dom0.getElementsByTagName('Link'):
+  print dir(link)
+  print link.getAttribute['type']
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute['type']
+for link in dom1.getElementsByTagName('Link'):
+  print link.getAttribute('type'), link.getAttribute('href')
+dom1
+for link in dom0.getElementsByTagName('Link'):
+  print link.getAttribute('type'), link.getAttribute('href')
+d1
+history
+import readline
+readline.write_history_file('usession1')
