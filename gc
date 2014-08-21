@@ -1,0 +1,8 @@
+#! /bin/bash
+d=$(date +%Y%m%d%H%M%S)
+for i in graphite_*;
+  do
+    nfn=consumed-${i}.$d
+    mv $i ${nfn}
+    cat ${nfn}
+done

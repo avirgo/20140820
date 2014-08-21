@@ -1,0 +1,1 @@
+graphite_show (){ shn=$(hostname|tr /A-Z/ /a-z/|sed 's/^prs-//');shn=${shn/-nj*};j=0;for i in $(/sbin/ifconfig $1|grep -o "bytes:[0-9]* ");do [[ "$j" == "0" ]] && (echo -n "${shn}.$1.RX ") || (echo -n "${shn}.$1.TX "); echo ${i/*:} $(date +%s);j=1;done; }
