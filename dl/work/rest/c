@@ -2,13 +2,13 @@
 
 [ukcms-poc]
 server=lo3-mystack.pearson.com
-basicauth=YW50aG9ueS52aXJnb0BwZWFyc29uLmNvbUB1a2Ntcy1wb2M6VG9ueV9WaXJnMDI=
+basicauth=xxx
 
 [cms-poc]
 server=icd-mystack.pearson.com
-basicauth=YW50aG9ueS52aXJnb0BwZWFyc29uLmNvbUBjbXMtcG9jOlRvbnlfVmlyZzAyCg=
+basicauth=xxx
 
 [cms-sandbox]
 server=icd-mystack.pearson.com
-basicauth=dG9ueUBjbXMtc2FuZGJveDpQYXNzd29yZDEk
+basicauth=xxx
 
