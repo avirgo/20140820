@@ -1,0 +1,111 @@
+dir()
+print ddom5
+print ddom5.toprettyxml()
+dir(ddom5)
+dir(dom5)
+dom5.firstChild
+dom5.firstChild.nodeName
+dom5.firstChild.nodeValue
+dir(dom5.firstChild)
+dir(dom5.childNodes)
+print dom5.childNodes
+print dom5.childNodes.count
+print dom5.childNodes.count()
+print dom5.childNodes.length
+dd5
+dir()
+dir(dd5a)
+dd5a
+dom5
+dom5.length
+dir(dom5)
+dom5.shaChildNodes
+dom5.hasChildNodes
+dom5.hasChildNodes()
+dom5.ChildNodes()
+dom5.ChildNodes
+dir(dom5.ChildNodes)
+dom5.childNodes
+dir(dom5.childNodes)
+dom5.childNodes.length
+z=dom5.firstChild
+dir(z)
+print z
+z=z.nextChild
+z=z.nextSibling
+dir(z
+dir(z)
+z=z.nextSibling
+z=dom5
+dir(z)
+z=z.nextSibling
+dir(z)
+z=z.nextSibling
+z=dom5
+z.firstChild
+z.nextSibling
+dir(z)
+z
+z.toxml()
+z.toprettyxml()
+print z
+print z.childNodes.length
+print z.childNodes.count
+print z.nodeName
+print z.nodeValue
+dir(z)
+print z.parentNode
+print z.lastChild
+y=z.nextSibling
+dir(y)
+dir(z.childNodes)
+print z.childNodes.index
+print z.childNodes.index.count
+print z.childNodes.index.length
+dir(z.childNodes.index)
+dir(z.childNodes.index())
+z.childNodes.index()
+print z.childNodes.index()
+print z.childNodes.index(1)
+print z.childNodes.index(2)
+print z.childNodes.index
+print z.childNodes.index()
+print z.childNodes.index().count
+print z.childNodes.index().size
+print z.childNodes.count
+print z.childNodes.count()
+dir(z)
+dir(dom5)
+dir(d5)
+print z.getElementsByTagName("Configuration")
+print z.getElementsByTagName("Configuration").toxml()
+print z.getElementsByTagName("Configuration")[0]
+x=z.getElementsByTagName("Configuration")[0]
+dir(x)
+x
+x.toxml()
+x=z.getElementsByTagName("FireWallService")
+x.toxml()
+dir(x)
+print x
+x=z.getElementsByTagName("FireWallService")[0]
+x=z.getElementsByTagName("FireWallRule")
+x
+x=z.getElementsByTagName("FireWallRule").count
+x=z.getElementsByTagName("EdgeGatewayServiceConfiguration")
+x
+x.toxml()
+dir(x)
+x=z.getElementsByTagName("EdgeGatewayServiceConfiguration")[0]
+dir(x)
+x.toxml()
+dir(help)
+help()
+shell
+exit
+exit()
+readline.write_history_file('hist201409051701.txt')
+import io
+readline.write_history_file('hist201409051701.txt')
+import readline
+readline.write_history_file('hist201409051701.txt')

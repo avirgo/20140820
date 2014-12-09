@@ -1,0 +1,255 @@
+groupadd -f -g 500 cmsadmin
+useradd -m -p '$1$W9SbHEXD$i8nrUtOExop0/8ZrcfI5x/' --comment "CMS ADMIN" --uid 513 500 cmsadmin
+groupadd -f -g 3000 dctm
+useradd -m -p '$1$sKsgR8jc$6EN/i.AAFFb5TLsrPY1UR0' --comment "DCTM" --uid 3000 3000 dctm
+groupadd -f -g 512 jainamit
+useradd -m -p '$1$Ue71OsV6$kpzCRSIvwVbcQm3DfF0zP/' --comment "jainamit" --uid 512 512 jainamit
+groupadd -f -g 10005 mmoritomo
+useradd -m -p '$1$UisfWWs7$2JYuCbm3ngOofjw5JnHEM.' --comment "mmoritomo" --uid 500 10005 mmoritomo
+groupadd -f -g 503 nagios
+useradd -m -p '$1$UV.s7p5s$F2l.kCZ9cPruugtIBXCDk/' --comment "Nagios" --uid 514 503 nagios
+groupadd -f -g 10007 neeraj
+useradd -m -p '$1$RmrrD9Rc$3XGr3KuJ4YUCZ9W/L5MQ1.' --comment "neeraj" --uid 504 10007 neeraj
+groupadd -f -g 507 nilesh
+useradd -m -p '!!$1$hLQgYYmz$DTdbTSKzvg0nTc8a3d2O30' --comment "nilesh" --uid 507 507 nilesh
+groupadd -f -g 9504 nisheeth
+useradd -m -p '$1$gXMCaCLi$8h8Z09CLxj6XY956eb9e9/' --comment "Nisheeth Jain +919971055062 nisheeth.jain@hcl.com" --uid 9504 9504 nisheeth
+groupadd -f -g 9005 dba
+useradd -m -p '$1$tca5UV8P$mBokJnLOChJ/uageLCwor0' --comment "" --uid 9005 9005 oracle
+groupadd -f -g 10009 rajeev
+useradd -m -p '$1$U532GS0a$C8eYiDGy9JoKb2SJN8rCd/' --comment "rajeev" --uid 506 10009 rajeev
+groupadd -f -g 10006 rakesh
+useradd -m -p '$1$hyf4IJ/7$9Rh/xibOVjPGT2xwdWbEA.' --comment "rakesh" --uid 503 10006 rakesh
+groupadd -f -g 501 rreddy
+useradd -m -p '$1$d08hLzbo$./uqEu9RDl6sKu9zZqdEH1' --comment "rreddy" --uid 501 501 rreddy
+groupadd -f -g 10502 sajnde
+useradd -m -p '$1$XpCCn9lp$FIc1fkVcuQjkFeI6gKqeZ.' --comment "Deepika Sajnani +011919711004979 Deepikas@hcl.com" --uid 10502 10502 sajnde
+groupadd -f -g 10501 sharpa
+useradd -m -p '$1$tQcSGdcf$L3uAUaZEpDqGM0bFumEWV1' --comment "Pankaj Sharma +011918826174434 pankaj_sharma@hcl.com" --uid 10501 10501 sharpa
+groupadd -f -g 10499 tvirgo
+useradd -m -p '$1$OsIFMrse$tIuRKLYzhSLs3CU0bTY9P/' --comment "Tony Virgo" --uid 10499 10499 tvirgo
+groupadd -f -g 9023 anubhav
+useradd -m -p '!!$1$5IKydAqW$wv/CoBc4QuNig6YG1GWsk.' --comment "" --uid 9022 9023 anubhav
+groupadd -f -g 500 cmsadmin
+useradd -m -p '$1$a7BFqVZa$8p3swiry78oQl1NXif2aa.' --comment "cmsadmin" --uid 500 500 cmsadmin
+groupadd -f -g 3000 dctm
+dba
+useradd -m -p '$1$.DCthsrt$5REZYF9yNj3TW8bErrO31/' --comment "" --uid 3000 3000 dctm
+groupadd -f -g 6501 diganta
+useradd -m -p '!!$1$ewX60Fw8$AgoLKA2pxpv8.sieansz/1' --comment "Diganta Kumar Nayak +011919686994323 digantakumar.n@hcl.com" --uid 6501 6501 diganta
+groupadd -f -g 9021 dimple
+useradd -m -p '!!$1$gbvbGssV$I.D7W3PgDM.YriOQ53jNI/' --comment "" --uid 9020 9021 dimple
+groupadd -f -g 5110 jainamit
+useradd -m -p '$1$F97wvDvi$8t3lGr.BQ1cd9C7G6VimC1' --comment "Amit Jain +919953102150 JainAmit@hcl.com" --uid 5110 5110 jainamit
+groupadd -f -g 5111 jyoti
+useradd -m -p '!!$1$0HwPr1Wl$PveFjg4OJV.YssoZ0523d0' --comment "Jyoti Tiwari +919810330467 jyoti-tiwari@hcl.com" --uid 5111 5111 jyoti
+groupadd -f -g 9010 kapanr
+useradd -m -p '!!$1$N.Un2iI5$l1qhMwtFXQ8UTMe7p3glm/' --comment "" --uid 9010 9010 kapanr
+groupadd -f -g 9018 kritis
+useradd -m -p '!!$1$EFMw.L8x$rEB7LNDaQVVaXiiRKYkkX1' --comment "Kriti Singh" --uid 9018 9018 kritis
+groupadd -f -g 9004 mmoritomo
+useradd -m -p '$1$.RT9f4M4$4CV/lpa1erTincx5T4nhq.' --comment "" --uid 9004 9004 mmoritomo
+groupadd -f -g 503 
+useradd -m -p '$1$UV.s7p5s$F2l.kCZ9cPruugtIBXCDk/' --comment "" --uid 503 503 nagios
+groupadd -f -g 9026 nathanr
+useradd -m -p '$1$duLemIwg$LdLEtbvyO7Wsz8oidLcNV1' --comment "" --uid 9025 9026 nathanr
+groupadd -f -g 502 neeraj
+useradd -m -p '$1$3HgBfbtF$cClghyzLQ/KULluDj1zt20' --comment "" --uid 502 502 neeraj
+groupadd -f -g 9005 dba
+useradd -m -p '$1$ADTqWZnt$PeUeBKB5.lIVPWLizZDFa1' --comment "" --uid 9005 9005 oracle
+groupadd -f -g 9006 rajeev
+useradd -m -p '$1$EHWEULqS$kIMB/BPH1mc3JIpxf1jr//' --comment "" --uid 9006 9006 rajeev
+groupadd -f -g 9024 rakesh
+useradd -m -p '$1$5i21ZtUn$DY5r9149ksU9Bp.IFHRVx0' --comment "" --uid 9023 9024 rakesh
+groupadd -f -g 9020 rjoost
+useradd -m -p '!!$1$3CkKGWPk$ewCVBPoQh5oaeu8zfetGT.' --comment "Robert Joost" --uid 9019 9020 rjoost
+groupadd -f -g 9002 rreddy
+useradd -m -p '$1$U3.PGc.o$hbAt04jmE7hRPHZM.LeHH.' --comment "Rukmakar Reddy" --uid 9002 9002 rreddy
+groupadd -f -g 10502 sajnde
+useradd -m -p '$1$XpCCn9lp$FIc1fkVcuQjkFeI6gKqeZ.' --comment "Deepika Sajnani +011919711004979 Deepikas@hcl.com" --uid 10502 10502 sajnde
+groupadd -f -g 10501 sharpa
+useradd -m -p '$1$tQcSGdcf$L3uAUaZEpDqGM0bFumEWV1' --comment "Pankaj Sharma +011918826174434 pankaj_sharma@hcl.com" --uid 10501 10501 sharpa
+groupadd -f -g 10499 tvirgo
+useradd -m -p '$1$OsIFMrse$tIuRKLYzhSLs3CU0bTY9P/' --comment "Tony Virgo" --uid 10499 10499 tvirgo
+groupadd -f -g 10027 anubhav
+useradd -m -p '!!$1$5IKydAqW$wv/CoBc4QuNig6YG1GWsk.' --comment "" --uid 10026 10027 anubhav
+groupadd -f -g 500 cmsadmin
+useradd -m -p '$1$W9SbHEXD$i8nrUtOExop0/8ZrcfI5x/' --comment "cmsadmin" --uid 500 500 cmsadmin
+groupadd -f -g 3000 dctm
+miqbal
+kapanr
+npancholi
+useradd -m -p '$1$SsLz0OFT$2kqj997UW5mMpuvo13zQS0' --comment "" --uid 3000 3000 dctm
+groupadd -f -g 506 dctmtemp
+useradd -m -p '!!$1$44zkuAe2$ZMXNRCihQWZ8jFkPpGRA//' --comment "" --uid 505 506 dctmtemp
+groupadd -f -g 6501 diganta
+useradd -m -p '!!$1$ewX60Fw8$AgoLKA2pxpv8.sieansz/1' --comment "Diganta Kumar Nayak +011919686994323 digantakumar.n@hcl.com" --uid 6501 6501 diganta
+groupadd -f -g 10025 dimple
+useradd -m -p '!!$1$gbvbGssV$I.D7W3PgDM.YriOQ53jNI/' --comment "" --uid 10024 10025 dimple
+groupadd -f -g 5110 jainamit
+useradd -m -p '$1$M61pl/O4$2gRQm8e3A1rZ2.1dfGKze.' --comment "Amit Jain +919953102150 JainAmit@hcl.com" --uid 5110 5110 jainamit
+groupadd -f -g 5111 jyoti
+useradd -m -p '!!$1$0HwPr1Wl$PveFjg4OJV.YssoZ0523d0' --comment "Jyoti Tiwari +919810330467 jyoti-tiwari@hcl.com" --uid 5111 5111 jyoti
+groupadd -f -g 10010 kapanr
+useradd -m -p '!!$1$N.Un2iI5$l1qhMwtFXQ8UTMe7p3glm/' --comment "kapanr@hcl.com +91 9810855413" --uid 10010 10010 kapanr
+groupadd -f -g 10022 kritis
+useradd -m -p '!!$1$dBzizazi$85.7yO7L20v/nXTnIUQ771' --comment "Kriti Singh" --uid 10022 10022 kritis
+groupadd -f -g 9003 mmoritomo
+useradd -m -p '$1$oIcidvkz$FQZDtYBFKEEsjUp3GpglL/' --comment "" --uid 9003 9003 mmoritomo
+groupadd -f -g 503 nagios
+useradd -m -p '$1$UV.s7p5s$F2l.kCZ9cPruugtIBXCDk/' --comment "" --uid 503 503 nagios
+groupadd -f -g 10029 nathanr
+useradd -m -p '$1$5wmUl5kG$D9cEST9IDrj7MPljmrHtS0' --comment "" --uid 10028 10029 nathanr
+groupadd -f -g 502 neeraj
+useradd -m -p '$1$/mn1wa7C$xfjmDDgkP8n1NSvRb3uvz.' --comment "" --uid 502 502 neeraj
+groupadd -f -g 505 dba
+useradd -m -p '$1$ADTqWZnt$PeUeBKB5.lIVPWLizZDFa1' --comment "" --uid 504 505 oracle
+groupadd -f -g 10014 rajeev
+useradd -m -p '$1$U532GS0a$C8eYiDGy9JoKb2SJN8rCd/' --comment "RajeevSingh@hcl.com" --uid 10014 10014 rajeev
+groupadd -f -g 10020 rakesh
+useradd -m -p '$1$dlV...jr$YBzrGmhpwZE6HGxdauFZD.' --comment "Rakesh Kumar Jha" --uid 10020 10020 rakesh
+groupadd -f -g 10024 rjoost
+useradd -m -p '!!$1$n/gAXSmV$VRORjMo7Jv66GpGRBQhzJ.' --comment "Robert Joost" --uid 10023 10024 rjoost
+groupadd -f -g 9002 rreddy
+useradd -m -p '$1$2X8ph2J9$qO7UVI8eu5e9mpBsthKit0' --comment "" --uid 9002 9002 rreddy
+groupadd -f -g 10502 sajnde
+useradd -m -p '$1$XpCCn9lp$FIc1fkVcuQjkFeI6gKqeZ.' --comment "Deepika Sajnani +011919711004979 Deepikas@hcl.com" --uid 10502 10502 sajnde
+groupadd -f -g 10501 sharpa
+useradd -m -p '$1$tQcSGdcf$L3uAUaZEpDqGM0bFumEWV1' --comment "Pankaj Sharma +011918826174434 pankaj_sharma@hcl.com" --uid 10501 10501 sharpa
+groupadd -f -g 10499 tvirgo
+useradd -m -p '$1$OsIFMrse$tIuRKLYzhSLs3CU0bTY9P/' --comment "Tony Virgo" --uid 10499 10499 tvirgo
+groupadd -f -g 10026 anubhav
+useradd -m -p '!!$1$5IKydAqW$wv/CoBc4QuNig6YG1GWsk.' --comment "" --uid 10026 10026 anubhav
+groupadd -f -g 500 cmsadmin
+useradd -m -p '$1$W9SbHEXD$i8nrUtOExop0/8ZrcfI5x/' --comment "cmsadmin" --uid 500 500 cmsadmin
+groupadd -f -g 3000 dctm
+miqbal
+kapanr
+npancholi
+useradd -m -p '$1$wwI/yOtQ$RydDgVJPze6KHBexf6crK0' --comment "" --uid 3000 3000 dctm
+groupadd -f -g 6501 diganta
+useradd -m -p '!!$1$ewX60Fw8$AgoLKA2pxpv8.sieansz/1' --comment "Diganta Kumar Nayak +011919686994323 digantakumar.n@hcl.com" --uid 6501 6501 diganta
+groupadd -f -g 10024 dimple
+useradd -m -p '!!$1$gbvbGssV$I.D7W3PgDM.YriOQ53jNI/' --comment "" --uid 10024 10024 dimple
+groupadd -f -g 5110 jainamit
+useradd -m -p '$1$IIYHq/7Y$s5CIN4gpab5ivzXk8zSUl1' --comment "Amit Jain +919953102150 JainAmit@hcl.com" --uid 5110 5110 jainamit
+groupadd -f -g 5111 jyoti
+useradd -m -p '!!$1$0HwPr1Wl$PveFjg4OJV.YssoZ0523d0' --comment "Jyoti Tiwari +919810330467 jyoti-tiwari@hcl.com" --uid 5111 5111 jyoti
+groupadd -f -g 10010 kapanr
+useradd -m -p '!!$1$N.Un2iI5$l1qhMwtFXQ8UTMe7p3glm/' --comment "kapanr@hcl.com +91 9810855413" --uid 10010 10010 kapanr
+groupadd -f -g 10022 kritis
+useradd -m -p '!!$1$Hm4Wwutd$KLaVqWvicCEX.0b5KzIad1' --comment "Kriti Singh" --uid 10022 10022 kritis
+groupadd -f -g 9003 mmoritomo
+useradd -m -p '$1$78WdPG6C$MzXBo9fzxtkNGg/H.rabg/' --comment "" --uid 9003 9003 mmoritomo
+groupadd -f -g 503 nagios
+useradd -m -p '$1$UV.s7p5s$F2l.kCZ9cPruugtIBXCDk/' --comment "" --uid 503 503 nagios
+groupadd -f -g 10028 nathanr
+useradd -m -p '$1$cf4R6BTS$UZArdxQJPhOU0KUhMKJfc1' --comment "" --uid 10028 10028 nathanr
+groupadd -f -g 502 neeraj
+useradd -m -p '$1$Iwlwa1jS$lcHjtB5A9roUt5kPAnvKr/' --comment "" --uid 502 502 neeraj
+groupadd -f -g 10014 rajeev
+useradd -m -p '$1$EHWEULqS$kIMB/BPH1mc3JIpxf1jr//' --comment "RajeevSingh@hcl.com" --uid 10014 10014 rajeev
+groupadd -f -g 10020 rakesh
+useradd -m -p '$1$djDqFCN3$NAgL2MXuwiAY4BzridmAn/' --comment "Rakesh Kumar Jha" --uid 10020 10020 rakesh
+groupadd -f -g  
+useradd -m -p '!!$1$Eik67KGO$OrYQfRdquQQKBns8OK1Xm0' --comment "" --uid   rjoost
+groupadd -f -g 9002 rreddy
+useradd -m -p '$1$qSQ9voAb$1RVJm.Q7Nk3W/8TXamlaP0' --comment "" --uid 9002 9002 rreddy
+groupadd -f -g 10502 sajnde
+useradd -m -p '$1$XpCCn9lp$FIc1fkVcuQjkFeI6gKqeZ.' --comment "Deepika Sajnani +011919711004979 Deepikas@hcl.com" --uid 10502 10502 sajnde
+groupadd -f -g 10501 sharpa
+useradd -m -p '$1$tQcSGdcf$L3uAUaZEpDqGM0bFumEWV1' --comment "Pankaj Sharma +011918826174434 pankaj_sharma@hcl.com" --uid 10501 10501 sharpa
+groupadd -f -g 10499 tvirgo
+useradd -m -p '$1$OsIFMrse$tIuRKLYzhSLs3CU0bTY9P/' --comment "Tony Virgo" --uid 10499 10499 tvirgo
+groupadd -f -g 9025 anubhav
+useradd -m -p '!!$1$5IKydAqW$wv/CoBc4QuNig6YG1GWsk.' --comment "" --uid 9024 9025 anubhav
+groupadd -f -g 500 cmsadmin
+useradd -m -p '$1$W9SbHEXD$i8nrUtOExop0/8ZrcfI5x/' --comment "cmsadmin" --uid 500 500 cmsadmin
+groupadd -f -g 3000 dctm
+dba
+useradd -m -p '$1$dbSbYzJm$XQoHY.d1T6W.P5bS0cxXz/' --comment "" --uid 3000 3000 dctm
+groupadd -f -g 6501 diganta
+useradd -m -p '!!$1$ewX60Fw8$AgoLKA2pxpv8.sieansz/1' --comment "Diganta Kumar Nayak +011919686994323 digantakumar.n@hcl.com" --uid 6501 6501 diganta
+groupadd -f -g 9023 dimple
+useradd -m -p '!!$1$gbvbGssV$I.D7W3PgDM.YriOQ53jNI/' --comment "" --uid 9022 9023 dimple
+groupadd -f -g 5110 jainamit
+useradd -m -p '$1$Ir3.x/Vs$kM0gEyb7OYDl1.7rWzafs1' --comment "Amit Jain +919953102150 JainAmit@hcl.com" --uid 5110 5110 jainamit
+groupadd -f -g 5111 jyoti
+useradd -m -p '!!$1$0HwPr1Wl$PveFjg4OJV.YssoZ0523d0' --comment "Jyoti Tiwari +919810330467 jyoti-tiwari@hcl.com" --uid 5111 5111 jyoti
+groupadd -f -g 9010 kapanr
+useradd -m -p '!!$1$N.Un2iI5$l1qhMwtFXQ8UTMe7p3glm/' --comment "" --uid 9010 9010 kapanr
+groupadd -f -g 9019 kritis
+useradd -m -p '!!$1$xWS1Ks1B$wuyNYc6K/Mk1TDuocmj/v1' --comment "Kriti Singh" --uid 9019 9019 kritis
+groupadd -f -g 9004 mmoritomo
+useradd -m -p '$1$XI7UeJA6$/7JpirohijbLGqifFMaz4/' --comment "" --uid 9004 9004 mmoritomo
+groupadd -f -g 503 
+useradd -m -p '$1$UV.s7p5s$F2l.kCZ9cPruugtIBXCDk/' --comment "" --uid 503 503 nagios
+groupadd -f -g 9026 nathanr
+useradd -m -p '$1$hIYqxfqu$tnBa/9rSBWVAyxYNOL8Oq0' --comment "" --uid 9025 9026 nathanr
+groupadd -f -g 502 neeraj
+useradd -m -p '$1$njGVgcQJ$JMfZ0ODL3ws2XOb.mitfG.' --comment "" --uid 502 502 neeraj
+groupadd -f -g 9005 dba
+useradd -m -p '$1$ADTqWZnt$PeUeBKB5.lIVPWLizZDFa1' --comment "" --uid 9005 9005 oracle
+groupadd -f -g 9006 rajeev
+useradd -m -p '$1$EHWEULqS$kIMB/BPH1mc3JIpxf1jr//' --comment "" --uid 9006 9006 rajeev
+groupadd -f -g 9017 rakesh
+useradd -m -p '$1$AOmpsp9l$2vsBbYTEpDmL2og1HVuLi1' --comment "Rakesh Kumar Jha" --uid 9017 9017 rakesh
+groupadd -f -g 9022 rjoost
+useradd -m -p '!!$1$J.6jMtQD$LMrohxWBlwjt07VtgyuUI1' --comment "Robert Joost" --uid 9021 9022 rjoost
+groupadd -f -g 9002 rreddy
+useradd -m -p '$1$U3.PGc.o$hbAt04jmE7hRPHZM.LeHH.' --comment "Rukmakar Reddy" --uid 9002 9002 rreddy
+groupadd -f -g 10502 sajnde
+useradd -m -p '$1$XpCCn9lp$FIc1fkVcuQjkFeI6gKqeZ.' --comment "Deepika Sajnani +011919711004979 Deepikas@hcl.com" --uid 10502 10502 sajnde
+groupadd -f -g 10501 sharpa
+useradd -m -p '$1$tQcSGdcf$L3uAUaZEpDqGM0bFumEWV1' --comment "Pankaj Sharma +011918826174434 pankaj_sharma@hcl.com" --uid 10501 10501 sharpa
+groupadd -f -g 10499 tvirgo
+useradd -m -p '$1$OsIFMrse$tIuRKLYzhSLs3CU0bTY9P/' --comment "Tony Virgo" --uid 10499 10499 tvirgo
+groupadd -f -g 10027 anubhav
+useradd -m -p '!!$1$AWA5.Iay$OKxD59UYp043DL6CZUahh1' --comment "" --uid 10026 10027 anubhav
+groupadd -f -g 500 cmsadmin
+useradd -m -p '$1$W9SbHEXD$i8nrUtOExop0/8ZrcfI5x/' --comment "cmsadmin" --uid 500 500 cmsadmin
+groupadd -f -g 3000 oracle
+dctm
+useradd -m -p '$1$pEBvc70O$./93lR0.de1ohFwYvEMyi/' --comment "" --uid 3000 3000 dctm
+groupadd -f -g 6501 diganta
+useradd -m -p '!!$1$ewX60Fw8$AgoLKA2pxpv8.sieansz/1' --comment "Diganta Kumar Nayak +011919686994323 digantakumar.n@hcl.com" --uid 6501 6501 diganta
+groupadd -f -g 10029 dimple
+useradd -m -p '!!$1$FTTK0nuk$VVfd.hhu8MALF9pc5fJSq0' --comment "" --uid 10028 10029 dimple
+groupadd -f -g 3002 ixosadm
+useradd -m -p '$1$IPYwVat/$1AabPSe5B049fv46Ff6Dg/' --comment "" --uid 3002 3002 ixosadm
+groupadd -f -g 5110 jainamit
+useradd -m -p '$1$/auxIvkK$mDP9Tqxyws1uZfC.BKCQt0' --comment "Amit Jain +919953102150 JainAmit@hcl.com" --uid 5110 5110 jainamit
+groupadd -f -g 5111 jyoti
+useradd -m -p '!!$1$0HwPr1Wl$PveFjg4OJV.YssoZ0523d0' --comment "Jyoti Tiwari +919810330467 jyoti-tiwari@hcl.com" --uid 5111 5111 jyoti
+groupadd -f -g 10010 kapanr
+useradd -m -p '!!$1$N.Un2iI5$l1qhMwtFXQ8UTMe7p3glm/' --comment "kapanr@hcl.com +91 9810855413" --uid 10010 10010 kapanr
+groupadd -f -g 10023 kritis
+useradd -m -p '!!$1$GYXAUmfD$MrjinBvpTtCI1AfNkyumL.' --comment "Kriti Singh" --uid 10023 10023 kritis
+groupadd -f -g 9003 mmoritomo
+useradd -m -p '$1$tT5aEUIb$j9ZDUMJnpgywufBcQTwoA0' --comment "Marshall Moritomo 6024562636" --uid 9003 9003 mmoritomo
+groupadd -f -g 503 
+useradd -m -p '$1$UV.s7p5s$F2l.kCZ9cPruugtIBXCDk/' --comment "" --uid 503 503 nagios
+groupadd -f -g 10030 nathanr
+useradd -m -p '$1$LUAerWAA$3c7daLr5ts8UHi4ZED7Io1' --comment "" --uid 10029 10030 nathanr
+groupadd -f -g 701 neeraj
+useradd -m -p '$1$2N7GL5HH$27V.MJEPN6ABBWsTw9aBr0' --comment "" --uid 701 701 neeraj
+groupadd -f -g 10020 nileshs
+useradd -m -p '!!$1$KxURzHxE$68APMWM1TvFAkFhGQBCCW1' --comment "Nilesh Salbarde" --uid 10020 10020 nileshs
+groupadd -f -g 3001 oracle
+useradd -m -p '$1$ADTqWZnt$PeUeBKB5.lIVPWLizZDFa1' --comment "" --uid 3001 3001 oracle
+groupadd -f -g 10016 rajeev
+useradd -m -p '$1$U532GS0a$C8eYiDGy9JoKb2SJN8rCd/' --comment "RajeevSingh@hcl.com" --uid 10016 10016 rajeev
+groupadd -f -g 10021 rakesh
+useradd -m -p '$1$AOmpsp9l$2vsBbYTEpDmL2og1HVuLi1' --comment "Rakesh Kumar Jha" --uid 10021 10021 rakesh
+groupadd -f -g 10026 rjoost
+useradd -m -p '!!$1$zu1gmIUF$Dc7e9DF9an6GWht8HJYqC0' --comment "Robert Joost" --uid 10025 10026 rjoost
+groupadd -f -g 9002 rreddy
+useradd -m -p '$1$wgvHZloe$6wHNOvBOIRffxYq/n8A8T0' --comment "" --uid 9002 9002 rreddy
+groupadd -f -g 10502 sajnde
+useradd -m -p '$1$XpCCn9lp$FIc1fkVcuQjkFeI6gKqeZ.' --comment "Deepika Sajnani +011919711004979 Deepikas@hcl.com" --uid 10502 10502 sajnde
+groupadd -f -g 10013 savvisadmin
+useradd -m -p '$1$gc.usdL0$O29pHj1V2X5XLOJ2gpYpT/' --comment "Temp Savvis admin - Dustin Lancaster" --uid 10013 10013 savvisadmin
+groupadd -f -g 10501 sharpa
+useradd -m -p '$1$tQcSGdcf$L3uAUaZEpDqGM0bFumEWV1' --comment "Pankaj Sharma +011918826174434 pankaj_sharma@hcl.com" --uid 10501 10501 sharpa
+groupadd -f -g 10499 tvirgo
+useradd -m -p '$1$OsIFMrse$tIuRKLYzhSLs3CU0bTY9P/' --comment "Tony Virgo" --uid 10499 10499 tvirgo

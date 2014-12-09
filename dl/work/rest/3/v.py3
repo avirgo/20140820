@@ -1,7 +1,7 @@
-import httplib
+import http.client
 from xml.dom.minidom import parseString
 import argparse
-import ConfigParser
+import configparser
 import sys
 
 conf_parser = argparse.ArgumentParser(
@@ -16,30 +16,30 @@ conf_parser.add_argument("org",
 
 args, rem = conf_parser.parse_known_args()
 if args.conf_file:
-    config = ConfigParser.SafeConfigParser()
+    config = configparser.SafeConfigParser()
     config.read([args.conf_file])
     dict(config.items(args.org))
     defs = dict(config.items(args.org))
 else:
     sys.exit(1)
 
-print defs
+print(defs)
 parser = argparse.ArgumentParser( )
 parser.set_defaults(**defs)
 parser.add_argument("--basicauth")
 parser.add_argument("--server")
 z = parser.parse_args(rem)
-print z.server
-print z.basicauth
+print(z.server)
+print(z.basicauth)
 
 
-conn = httplib.HTTPSConnection(z.server)
+conn = http.client.HTTPSConnection(z.server)
 bastr = "Basic {0}".format(str(z.basicauth))
-print bastr
+print(bastr)
 headers={"Authorization": "Basic {0}".format(str(z.basicauth)), "Accept": "application/*+xml;version=5.1"}
 r0=conn.request("POST","/api/sessions",headers=headers)
 r1=conn.getresponse()
-print r1.status, r1.reason
+print(r1.status, r1.reason)
 d1=r1.read()
 h1=r1.getheaders()
 auheaders={}
@@ -58,7 +58,7 @@ for link in dom0.getElementsByTagName('Link'):
 orgroot="/api/org/" + str(orghref.split('/')[-1])
 c2=conn.request("GET",orgroot,headers=auheaders)
 r2=conn.getresponse()
-print orgroot, r2.status, r2.reason
+print(orgroot, r2.status, r2.reason)
 d2=r2.read()
 h2=r2.getheaders()
 dom1 = parseString(d2)
@@ -69,7 +69,7 @@ for link in dom1.getElementsByTagName('Link'):
 vdcroot="/api/vdc/" + str(vdchref.split('/')[-1])
 c3=conn.request("GET",vdcroot,headers=auheaders)
 r3=conn.getresponse()
-print vdcroot, r3.status, r3.reason
+print(vdcroot, r3.status, r3.reason)
 d3=r3.read()
 h3=r3.getheaders()
 dom2 = parseString(d3)
@@ -77,26 +77,26 @@ for link in dom2.getElementsByTagName('Link'):
   if link.getAttribute('rel') == 'edgeGateways':
     edgehref = link.getAttribute('href')
 
-print edgehref
+print(edgehref)
 t3 = edgehref.split('/')[3:]
 t3.insert(0, '')
 edgeroot="/".join(t3)
 c4=conn.request("GET",edgeroot,headers=auheaders)
 r4=conn.getresponse()
-print edgeroot, r4.status, r4.reason
+print(edgeroot, r4.status, r4.reason)
 d4=r4.read()
 h4=r4.getheaders()
 dom3 = parseString(d4)
-print d4
+print(d4)
 ddom3 = dom3.firstChild
-print ddom3.toxml()
+print(ddom3.toxml())
 ddom3 = ddom3.firstChild
-print ddom3.toxml()
+print(ddom3.toxml())
 while ddom3:
   if ddom3.nodeName == 'EdgeGatewayRecord':
-    print ddom3.toxml()
-    print "#%s#\n" % (ddom3.nodeName)
-    print ddom3.nodeValue
+    print(ddom3.toxml())
+    print("#%s#\n" % (ddom3.nodeName))
+    print(ddom3.nodeValue)
     break
   ddom3 = ddom3.nextSibling
 
@@ -106,19 +106,10 @@ t4.insert(0,'')
 edgegwroot = "/".join(t4)
 c5 = conn.request("GET", edgegwroot,headers=auheaders)
 r5 = conn.getresponse()
-print edgeroot, r5.status, r5.reason
+print(edgeroot, r5.status, r5.reason)
 d5 = r5.read()
 h5 = r5.getheaders()
 dom5 = parseString(d5)
-# print d5
+print(d5)
 
-print " ---- "
-print " ---- "
-print " ---- "
-dd5a = dom5.getElementsByTagName('EdgeGatewayServiceConfiguration')
-for itm in dd5a.item(0).childNodes:
-  print itm.nodeName
-print " ---- "
-print " ---- "
-print " ---- "
 

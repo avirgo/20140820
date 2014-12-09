@@ -1,0 +1,66 @@
+dir(dom5)
+print dom5.childNodes
+print dom5.childNodes.count
+print dom5.childNodes.count()
+print dom5.getElementsByTagName('Configuration')
+print dom5.getElementsByTagName('Configuration').count()
+print dom5.getElementsByTagName('Configuration').childNodes()
+print dom5.getElementsByTagName('Configuration').length
+z5=print dom5.getElementsByTagName('Configuration')
+z5=dom5.getElementsByTagName('Configuration')
+dir(z5)
+print z5.length
+print z5.item
+print z5.item(1)
+print z5.item(0)
+dir( z5.item(0))
+z5.item(0).childNodes
+z5.item(0).childNodes.length
+dd5a = dom5.getElementsByTagName('Configuration')
+dir(dd5a)
+dir(dd5a.index)
+print dd5a.index
+print dd5a.index()
+print dd5a.index("*")
+print dd5a.
+dir(dd5a)
+dir(dd5a.item)
+dd5a
+dd5a.count()
+dd5a.count
+dd5a.item
+for x in dd5a.item:
+  print x
+for x in dd5a.item(0):
+  print x
+print dd5a.item(0)
+print dd5a.item(1)
+dir(dd5a.item(0))
+print dd5a.item(0).childNodes
+for x in dd5a.item(0).childNodes:
+  print x
+print dd5a.toxml()
+print dd5a.item(0).toxml()
+dd5a = dom5.getElementsByTagName('FirewallService')
+dir(dd5a)
+dd5a.item(0)
+for x in dd5a.item(0).childNodes:
+  print x
+for x in dd5a.item(0).childNodes:
+  dir(x)
+for x in dd5a.item(0).childNodes:
+  print x.nodeName
+dir(dd5a.item(0).childNodes)
+print dd5a.item(0).childNodes.count()
+print dd5a.item(0).childNodes.count
+print dd5a.item(0).childNodes.length
+print dd5a.item(0).childNodes
+print dd5a.item(0).childNodes.toxml()
+for x in dd5a.item(0).childNodes:
+ print x.toxml()
+import readline
+dir(readline)
+print readline.get_history_length
+print readline.get_history_length()
+print readline.get_current_history_length()
+readline.write_history_file('hist201409081551.txt')
